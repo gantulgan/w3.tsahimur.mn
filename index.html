@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tsahimur LLC — IT Consulting & System Development</title>
+  <meta name="description" content="Tsahimur LLC provides IT consulting and system development: architecture, delivery, integrations, and modern web platforms." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Favicons (place files in /assets/favicons/) -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tsahimur LLC" />
+  <meta property="og:description" content="IT consulting and system development. Reliable delivery, clean architecture, measurable outcomes." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.66);
+      --border: rgba(255,255,255,.12);
+      --accent: #7c5cff;
+      --accent2:#38bdf8;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1080px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    [data-theme="light"]{
+      --bg: #f7f8fb;
+      --card: rgba(10,18,32,.05);
+      --card2: rgba(10,18,32,.08);
+      --text: rgba(10,18,32,.92);
+      --muted: rgba(10,18,32,.62);
+      --border: rgba(10,18,32,.12);
+      --shadow: 0 18px 60px rgba(10,18,32,.14);
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(124,92,255,.22), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 20%, rgba(56,189,248,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .container{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: color-mix(in oklab, var(--bg) 70%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .brand img{
+      width:34px; height:34px;
+      object-fit:contain;
+      border-radius:12px;
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      padding:6px;
+    }
+
+    .nav-links{
+      display:flex; align-items:center; gap:14px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    .nav-links a{ padding:8px 10px; border-radius:12px; }
+    .nav-links a:hover{ background: var(--card); color:var(--text); }
+    .nav-actions{ display:flex; align-items:center; gap:10px; }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: var(--card);
+      color:var(--text);
+      font-weight:700;
+      font-size:14px;
+      gap:10px;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: var(--card2); }
+    .btn.primary{
+      border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 55%, transparent), color-mix(in oklab, var(--accent2) 35%, transparent));
+    }
+    .btn.primary:hover{ border-color: color-mix(in oklab, var(--accent) 60%, var(--border)); }
+    .btn.small{ padding:8px 12px; font-size:13px; border-radius:12px; }
+
+    .icon{ width:16px; height:16px; display:inline-block; }
+
+    .hero{ padding:56px 0 26px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .panel{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{ padding:26px; position:relative; overflow:hidden; }
+    .hero-main:before{
+      content:""; position:absolute; inset:-40%;
+      background: radial-gradient(circle at 25% 25%, rgba(124,92,255,.22), transparent 45%),
+                  radial-gradient(circle at 65% 35%, rgba(56,189,248,.16), transparent 50%);
+      transform: rotate(-10deg);
+      pointer-events:none;
+    }
+    .hero-main > *{ position:relative; }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight:700;
+      font-size:12px;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size:40px;
+      line-height:1.06;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      margin:0 0 18px;
+      max-width: 62ch;
+    }
+    .hero-ctas{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:18px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:13px;
+    }
+    .chip{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+    }
+    .hero-side{ padding:18px; display:flex; flex-direction:column; gap:12px; }
+    .stat{
+      padding:16px;
+      border-radius: 16px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .stat b{ font-size:14px; display:block; margin-bottom:6px; }
+    .stat p{ margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+    .stat .small{ font-size:12px; }
+
+    section{ padding:22px 0; }
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:12px;
+    }
+    .section-title{ font-size:18px; margin:0; letter-spacing:-.2px; }
+    .section-note{ color:var(--muted); font-size:13px; margin:0; max-width: 64ch; }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .card{
+      padding:16px;
+      border-radius: 18px;
+      border:1px solid var(--border);
+      background: var(--card);
+      box-shadow: 0 10px 40px rgba(0,0,0,.18);
+    }
+    .card h3{ margin:0 0 6px; font-size:14px; }
+    .card p{ margin:0; color:var(--muted); font-size:13px; line-height:1.55; }
+    .card .tagrow{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .tag{
+      padding:6px 10px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .founders{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .person{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:16px;
+      border-radius: 18px;
+      border:1px solid var(--border);
+      background: var(--card);
+    }
+    .avatar{
+      width:44px; height:44px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border:1px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+      color:var(--muted);
+      flex:0 0 auto;
+    }
+    .person h4{ margin:0; font-size:14px; }
+    .person p{ margin:6px 0 10px; color:var(--muted); font-size:13px; line-height:1.5; }
+    .person a.link{
+      display:inline-flex; align-items:center; gap:8px;
+      color: var(--text);
+      font-weight:800;
+      font-size:13px;
+      padding:8px 10px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .person a.link:hover{ background: rgba(255,255,255,.07); }
+
+    footer{ padding:26px 0 40px; color:var(--muted); font-size:13px; }
+    .foot{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      border-top:1px solid var(--border);
+      padding-top:18px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 920px){ .hero-grid{ grid-template-columns: 1fr; } }
+    @media (max-width: 780px){
+      h1{ font-size:34px; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .founders{ grid-template-columns: 1fr; }
+      .nav-links{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Tsahimur home">
+        <img src="assets/tsahimur_logo_transparent.png" alt="Tsahimur logo">
+        <span data-i18n="brand">Tsahimur LLC</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#founders" data-i18n="nav_founders">Founders</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn small" id="langBtn" type="button" aria-label="Toggle language">
+          <span id="langLabel">MN</span>
+        </button>
+
+        <button class="btn" id="themeBtn" type="button" aria-label="Toggle theme">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span data-i18n="theme">Theme</span>
+        </button>
+
+        <a class="btn primary" href="#contact">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/>
+            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span data-i18n="start_project">Start a Project</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="hero">
+      <div class="hero-grid">
+        <div class="panel hero-main">
+          <span class="kicker">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--accent2);display:inline-block"></span>
+            <span data-i18n="kicker">IT Consulting • System Development</span>
+          </span>
+
+          <h1 data-i18n="h1">Build reliable systems that scale with your business.</h1>
+          <p class="sub" data-i18n="sub">
+            Tsahimur LLC helps teams design, modernize, and deliver software—clean architecture, strong execution,
+            and measurable outcomes.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="#contact" data-i18n="cta_contact">Contact Us</a>
+            <a class="btn" href="#services" data-i18n="cta_services">Explore Services</a>
+          </div>
+
+          <div class="meta" aria-label="Highlights">
+            <span class="chip">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="chip_delivery">End-to-end delivery</span>
+            </span>
+            <span class="chip">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="chip_modern">Modern tech stack</span>
+            </span>
+            <span class="chip">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.35 7-10V6l-7-3-7 3v5c0 5.65 7 10 7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="chip_security">Security-minded</span>
+            </span>
+          </div>
+        </div>
+
+        <aside class="panel hero-side" aria-label="Value points">
+          <div class="stat">
+            <b data-i18n="stat1_title">Consulting that unblocks delivery</b>
+            <p data-i18n="stat1_desc">Architecture review, roadmap planning, and pragmatic guidance to ship faster with fewer surprises.</p>
+          </div>
+          <div class="stat">
+            <b data-i18n="stat2_title">System development you can maintain</b>
+            <p data-i18n="stat2_desc">Well-structured codebases, documentation, tests, and CI/CD—built for long-term ownership.</p>
+          </div>
+          <div class="stat">
+            <b data-i18n="stat3_title">Strong leadership, broad experience</b>
+            <p class="small" data-i18n="stat3_desc">Founded by senior practitioners with experience across multiple industries and systems.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="services_title">Services</h2>
+        <p class="section-note" data-i18n="services_note">Small, focused offerings that cover strategy → delivery → ongoing support.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 data-i18n="svc1_title">IT Consulting & Architecture</h3>
+          <p data-i18n="svc1_desc">System design, audits, modernization plans, and technical leadership for teams and stakeholders.</p>
+          <div class="tagrow">
+            <span class="tag" data-i18n="tag_arch">Architecture</span>
+            <span class="tag" data-i18n="tag_roadmap">Roadmap</span>
+            <span class="tag" data-i18n="tag_review">Review</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="svc2_title">System Development</h3>
+          <p data-i18n="svc2_desc">Web platforms, APIs, integrations, and internal tools—implemented with clean, scalable patterns.</p>
+          <div class="tagrow">
+            <span class="tag" data-i18n="tag_web">Web</span>
+            <span class="tag" data-i18n="tag_api">API</span>
+            <span class="tag" data-i18n="tag_integration">Integration</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="svc3_title">Delivery Enablement</h3>
+          <p data-i18n="svc3_desc">CI/CD pipelines, environments, monitoring, and developer workflows that improve reliability.</p>
+          <div class="tagrow">
+            <span class="tag" data-i18n="tag_cicd">CI/CD</span>
+            <span class="tag" data-i18n="tag_devops">DevOps</span>
+            <span class="tag" data-i18n="tag_observability">Observability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="about_title">About Tsahimur</h2>
+        <p class="section-note" data-i18n="about_note">We work best with teams that value clarity, accountability, and engineering discipline.</p>
+      </div>
+
+      <div class="card">
+        <p style="margin:0;color:var(--muted);line-height:1.7;font-size:14px" data-i18n="about_body">
+          Tsahimur LLC is an IT consulting and system development company. We help clients turn business needs into
+          well-designed, production-ready software. Our approach emphasizes pragmatic architecture, measurable delivery,
+          and maintainable systems.
+        </p>
+      </div>
+    </section>
+
+    <section id="founders">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="founders_title">Founders</h2>
+        <p class="section-note" data-i18n="founders_note">Connect with the founders on LinkedIn.</p>
+      </div>
+
+      <div class="founders">
+        <div class="person">
+          <div class="avatar" aria-hidden="true">GN</div>
+          <div>
+            <h4>Gantulga Nadmid</h4>
+            <p data-i18n="gn_desc">Co-founder. IT consulting & system development leadership.</p>
+            <a class="link" href="https://www.linkedin.com/in/gantulga-nadmid/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.5 9.5V18H3.5V9.5h3Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 18v-4.4c0-2.3 1.2-3.5 3-3.5 1.7 0 2.5 1.2 2.5 3.1V18H19V12.8C19 9.9 17.4 8 14.7 8 12.9 8 11.7 9 11.2 9.8V9.5H10V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="linkedin">LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="avatar" aria-hidden="true">TB</div>
+          <div>
+            <h4>Temuulen Bold</h4>
+            <p data-i18n="tb_desc">Co-founder. Experienced across multiple fields and systems.</p>
+            <a class="link" href="https://www.linkedin.com/in/temuulen-bold-905349135/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.5 9.5V18H3.5V9.5h3Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 18v-4.4c0-2.3 1.2-3.5 3-3.5 1.7 0 2.5 1.2 2.5 3.1V18H19V12.8C19 9.9 17.4 8 14.7 8 12.9 8 11.7 9 11.2 9.8V9.5H10V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="linkedin">LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+        <p class="section-note" data-i18n="contact_note">Replace the placeholders below with your real email/phone when ready.</p>
+      </div>
+
+      <div class="card" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+        <div style="min-width:260px">
+          <h3 style="margin:0 0 6px;font-size:14px" data-i18n="contact_card_title">Let’s talk about your project</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.55">
+            <span data-i18n="contact_email_label">Email</span>:
+            <span style="color:var(--text);font-weight:800">hello@tsahimur.com</span>
+            &nbsp;•&nbsp;
+            <span data-i18n="contact_phone_label">Phone</span>:
+            <span style="color:var(--text);font-weight:800">+976 XXXX-XXXX</span>
+          </p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="mailto:hello@tsahimur.com?subject=Project%20Inquiry%20—%20Tsahimur%20LLC" data-i18n="email_us">Email Us</a>
+          <a class="btn" href="#top" data-i18n="back_top">Back to Top</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> <span data-i18n="brand">Tsahimur LLC</span>. <span data-i18n="rights">All rights reserved.</span></div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <span style="color:var(--muted)" data-i18n="foot_note">Minimal SPA • Static Hosting Ready</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle (persisted)
+    const root = document.documentElement;
+    const themeBtn = document.getElementById("themeBtn");
+    const savedTheme = localStorage.getItem("tsahimur_theme");
+    if (savedTheme === "light") root.setAttribute("data-theme", "light");
+
+    themeBtn.addEventListener("click", () => {
+      const isLight = root.getAttribute("data-theme") === "light";
+      if (isLight) {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("tsahimur_theme", "dark");
+      } else {
+        root.setAttribute("data-theme", "light");
+        localStorage.setItem("tsahimur_theme", "light");
+      }
+    });
+
+    // Language toggle (EN/MN) with i18n keys
+    const i18n = {
+      en: {
+        brand: "Tsahimur LLC",
+        nav_services: "Services",
+        nav_about: "About",
+        nav_founders: "Founders",
+        nav_contact: "Contact",
+        theme: "Theme",
+        start_project: "Start a Project",
+        kicker: "IT Consulting • System Development",
+        h1: "Build reliable systems that scale with your business.",
+        sub: "Tsahimur LLC helps teams design, modernize, and deliver software—clean architecture, strong execution, and measurable outcomes.",
+        cta_contact: "Contact Us",
+        cta_services: "Explore Services",
+        chip_delivery: "End-to-end delivery",
+        chip_modern: "Modern tech stack",
+        chip_security: "Security-minded",
+        stat1_title: "Consulting that unblocks delivery",
+        stat1_desc: "Architecture review, roadmap planning, and pragmatic guidance to ship faster with fewer surprises.",
+        stat2_title: "System development you can maintain",
+        stat2_desc: "Well-structured codebases, documentation, tests, and CI/CD—built for long-term ownership.",
+        stat3_title: "Strong leadership, broad experience",
+        stat3_desc: "Founded by senior practitioners with experience across multiple industries and systems.",
+        services_title: "Services",
+        services_note: "Small, focused offerings that cover strategy → delivery → ongoing support.",
+        svc1_title: "IT Consulting & Architecture",
+        svc1_desc: "System design, audits, modernization plans, and technical leadership for teams and stakeholders.",
+        svc2_title: "System Development",
+        svc2_desc: "Web platforms, APIs, integrations, and internal tools—implemented with clean, scalable patterns.",
+        svc3_title: "Delivery Enablement",
+        svc3_desc: "CI/CD pipelines, environments, monitoring, and developer workflows that improve reliability.",
+        tag_arch: "Architecture",
+        tag_roadmap: "Roadmap",
+        tag_review: "Review",
+        tag_web: "Web",
+        tag_api: "API",
+        tag_integration: "Integration",
+        tag_cicd: "CI/CD",
+        tag_devops: "DevOps",
+        tag_observability: "Observability",
+        about_title: "About Tsahimur",
+        about_note: "We work best with teams that value clarity, accountability, and engineering discipline.",
+        about_body: "Tsahimur LLC is an IT consulting and system development company. We help clients turn business needs into well-designed, production-ready software. Our approach emphasizes pragmatic architecture, measurable delivery, and maintainable systems.",
+        founders_title: "Founders",
+        founders_note: "Connect with the founders on LinkedIn.",
+        gn_desc: "Co-founder. IT consulting & system development leadership.",
+        tb_desc: "Co-founder. Experienced across multiple fields and systems.",
+        linkedin: "LinkedIn Profile",
+        contact_title: "Contact",
+        contact_note: "Replace the placeholders below with your real email/phone when ready.",
+        contact_card_title: "Let’s talk about your project",
+        contact_email_label: "Email",
+        contact_phone_label: "Phone",
+        email_us: "Email Us",
+        back_top: "Back to Top",
+        rights: "All rights reserved.",
+        foot_note: "Minimal SPA • Static Hosting Ready"
+      },
+      mn: {
+        brand: "Tsahimur LLC",
+        nav_services: "Үйлчилгээ",
+        nav_about: "Бидний тухай",
+        nav_founders: "Үүсгэн байгуулагчид",
+        nav_contact: "Холбоо барих",
+        theme: "Загвар",
+        start_project: "Төслийг эхлүүлэх",
+        kicker: "IT зөвлөх үйлчилгээ • Систем хөгжүүлэлт",
+        h1: "Бизнес тань өсөхөд дагаж тэлэх найдвартай систем бүтээнэ.",
+        sub: "Tsahimur LLC нь системийн зураглал, шинэчлэл, хөгжүүлэлт, нэвтрүүлэлтийг бодит үр дүнтэйгээр гүйцэтгэнэ—цэвэр архитектур, хүчтэй гүйцэтгэл, хэмжигдэхүйц үр дүн.",
+        cta_contact: "Холбоо барих",
+        cta_services: "Үйлчилгээг үзэх",
+        chip_delivery: "Эцсээс нь хүртэл гүйцэтгэл",
+        chip_modern: "Орчин үеийн технологи",
+        chip_security: "Аюулгүй байдлыг нэн тэргүүнд",
+        stat1_title: "Хүргэлтийг хурдлуулах зөвлөгөө",
+        stat1_desc: "Архитектурын үнэлгээ, замын зураг, практик зөвлөмж—илүү хурдан, эрсдэл багатай хүргэлт.",
+        stat2_title: "Арчилж хөгжүүлэх боломжтой хөгжүүлэлт",
+        stat2_desc: "Бүтэцтэй код, баримтжуулалт, тест, CI/CD—урт хугацааны эзэмшилд тохиромжтой.",
+        stat3_title: "Туршлагатай, өргөн хүрээний мэдлэг",
+        stat3_desc: "Олон салбар, олон төрлийн систем дээр ажилласан ахлах түвшний мэргэжилтнүүдийн баг.",
+        services_title: "Үйлчилгээ",
+        services_note: "Стратеги → хөгжүүлэлт → дэмжлэг хүртэлх багц шийдлүүд.",
+        svc1_title: "IT зөвлөх үйлчилгээ & Архитектур",
+        svc1_desc: "Системийн зураглал, аудит, шинэчлэлийн төлөвлөгөө, техникийн манлайлал.",
+        svc2_title: "Систем хөгжүүлэлт",
+        svc2_desc: "Вэб платформ, API, интеграци, дотоод хэрэгслүүд—цэвэр, тэлэх боломжтой загвараар.",
+        svc3_title: "Хүргэлт ба DevOps сайжруулалт",
+        svc3_desc: "CI/CD, орчин тохиргоо, мониторинг, хөгжүүлэгчийн ажлын урсгал—найдвартай ажиллагааг өсгөнө.",
+        tag_arch: "Архитектур",
+        tag_roadmap: "Замын зураг",
+        tag_review: "Үнэлгээ",
+        tag_web: "Вэб",
+        tag_api: "API",
+        tag_integration: "Интеграци",
+        tag_cicd: "CI/CD",
+        tag_devops: "DevOps",
+        tag_observability: "Мониторинг",
+        about_title: "Tsahimur тухай",
+        about_note: "Тодорхой байдал, хариуцлага, инженерийн сахилга батыг эрхэмлэдэг багуудтай сайн нийцдэг.",
+        about_body: "Tsahimur LLC нь IT зөвлөх үйлчилгээ болон систем хөгжүүлэлтийн компани. Бизнесийн хэрэгцээг сайн төлөвлөсөн, продакшнд бэлэн шийдэл болгон хэрэгжүүлнэ. Бид прагматик архитектур, хэмжигдэхүйц хүргэлт, арчилж хөгжүүлэх боломжтой системд төвлөрдөг.",
+        founders_title: "Үүсгэн байгуулагчид",
+        founders_note: "LinkedIn дээр холбогдоорой.",
+        gn_desc: "Үүсгэн байгуулагч. IT зөвлөх үйлчилгээ ба систем хөгжүүлэлтийн манлайлал.",
+        tb_desc: "Үүсгэн байгуулагч. Олон чиглэл, олон төрлийн систем дээрх туршлагатай.",
+        linkedin: "LinkedIn",
+        contact_title: "Холбоо барих",
+        contact_note: "Бэлэн болмогц имэйл/утсаа жинхэнээр нь солино уу.",
+        contact_card_title: "Төслийн талаар ярилцъя",
+        contact_email_label: "Имэйл",
+        contact_phone_label: "Утас",
+        email_us: "Имэйл илгээх",
+        back_top: "Дээш буцах",
+        rights: "Бүх эрх хуулиар хамгаалагдсан.",
+        foot_note: "Minimal SPA • Static hosting-д бэлэн"
+      }
+    };
+
+    const langBtn = document.getElementById("langBtn");
+    const langLabel = document.getElementById("langLabel");
+
+    function applyLang(lang) {
+      // Update <html lang="">
+      document.documentElement.lang = lang === "mn" ? "mn" : "en";
+
+      // Update toggle label (shows the OTHER language you can switch to)
+      langLabel.textContent = (lang === "en") ? "MN" : "EN";
+
+      // Replace all [data-i18n] text
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = i18n[lang]?.[key];
+        if (typeof val === "string") el.textContent = val;
+      });
+
+      localStorage.setItem("tsahimur_lang", lang);
+    }
+
+    const savedLang = localStorage.getItem("tsahimur_lang") || "en";
+    applyLang(savedLang);
+
+    langBtn.addEventListener("click", () => {
+      const current = localStorage.getItem("tsahimur_lang") || "en";
+      applyLang(current === "en" ? "mn" : "en");
+    });
+
+    // Optional: mark active section in URL hash without jump
+    const sections = ["services","about","founders","contact"].map(id => document.getElementById(id));
+    const obs = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      history.replaceState(null, "", "#" + visible.target.id);
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: [0.12, 0.2, 0.35] });
+
+    sections.forEach(s => s && obs.observe(s));
+  </script>
+</body>
+</html>
