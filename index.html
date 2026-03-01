@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tsahimur LLC | IT Consulting & System Development</title>
-  <meta name="description" content="Tsahimur LLC provides IT consulting and system development: architecture, delivery, integrations, and modern web platforms." />
+  <title>Tsahimur LLC — IT Consulting & System Development</title>
+  <meta name="description" content="Practical IT consulting and reliable system development. We design, build, and modernize scalable digital systems with disciplined execution." />
   <meta name="theme-color" content="#0b1220" />
   <meta name="author" content="Tsahimur LLC" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <script>
+    window.SITE_URL = "https://tsahimur.mn";
+  </script>
+
   <meta name="keywords" content="IT consulting, system development, software architecture, web development, API integration, DevOps, Mongolia" />
   <link rel="canonical" href="https://tsahimur.mn/" />
   <link rel="alternate" hreflang="en" href="https://tsahimur.mn/?lang=en" />
   <link rel="alternate" hreflang="mn" href="https://tsahimur.mn/?lang=mn" />
-  <link rel="alternate" hreflang="x-default" href="https://tsahimur.mn/" />
+  <link rel="alternate" hreflang="x-default" href="https://tsahimur.mn/?lang=en" />
 
   <!-- Favicons (place files in /assets/favicons/) -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
@@ -25,24 +31,21 @@
   <link rel="manifest" href="assets/favicons/site.webmanifest">
 
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Tsahimur LLC | IT Consulting & System Development" />
-  <meta property="og:description" content="IT consulting and system development. Reliable delivery, clean architecture, measurable outcomes." />
+  <meta property="og:title" content="Tsahimur LLC — IT Consulting & System Development" />
+  <meta property="og:description" content="Practical IT consulting and reliable system development. Scalable systems, disciplined execution, measurable outcomes." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Tsahimur LLC" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="mn_MN" />
   <meta property="og:url" content="https://tsahimur.mn/" />
-  <meta property="og:image" content="https://tsahimur.mn/assets/favicons/android-chrome-512.png" />
-  <meta property="og:image:width" content="512" />
-  <meta property="og:image:height" content="512" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Tsahimur LLC logo for social sharing previews" />
+  <meta property="og:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png" />
+    <meta property="og:image:alt" content="Tsahimur LLC logo for social sharing previews" />
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tsahimur LLC | IT Consulting & System Development" />
-  <meta name="twitter:description" content="IT consulting and system development. Reliable delivery, clean architecture, measurable outcomes." />
-  <meta name="twitter:image" content="https://tsahimur.mn/assets/favicons/android-chrome-512.png" />
+  <meta name="twitter:title" content="Tsahimur LLC — IT Consulting & System Development" />
+  <meta name="twitter:description" content="Practical IT consulting and reliable system development." />
+  <meta name="twitter:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png" />
   <meta name="twitter:image:alt" content="Tsahimur LLC logo for social sharing previews" />
 
   <script type="application/ld+json">
@@ -52,7 +55,11 @@
     "name": "Tsahimur LLC",
     "url": "https://tsahimur.mn/",
     "logo": "https://tsahimur.mn/assets/tsahimur_logo_transparent.png",
-    "description": "IT consulting and system development company focused on architecture, delivery, integrations, and modern web platforms."
+    "description": "IT consulting and system development company providing architecture, delivery, modernization, and implementation services.",
+    "sameAs": [
+      "https://www.linkedin.com/in/gantulga-nadmid/",
+      "https://www.linkedin.com/in/temuulen-bold-905349135/"
+    ]
   }
   </script>
 
@@ -248,7 +255,7 @@
 
     .grid-3{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap:12px;
     }
     .card{
@@ -453,12 +460,22 @@
         </div>
 
         <div class="card">
-          <h3 data-i18n="svc3_title">Delivery Enablement</h3>
-          <p data-i18n="svc3_desc">CI/CD pipelines, environments, monitoring, and developer workflows that improve reliability.</p>
+          <h3 data-i18n="svc3_title">System Modernization</h3>
+          <p data-i18n="svc3_desc">We refactor legacy systems, improve performance, and prepare infrastructure for long-term scalability.</p>
           <div class="tagrow">
-            <span class="tag" data-i18n="tag_cicd">CI/CD</span>
-            <span class="tag" data-i18n="tag_devops">DevOps</span>
-            <span class="tag" data-i18n="tag_observability">Observability</span>
+            <span class="tag" data-i18n="tag_modernization">Modernization</span>
+            <span class="tag" data-i18n="tag_performance">Performance</span>
+            <span class="tag" data-i18n="tag_scalability">Scalability</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="svc4_title">Delivery & Technical Leadership</h3>
+          <p data-i18n="svc4_desc">We provide senior-level technical leadership, architecture oversight, and delivery governance.</p>
+          <div class="tagrow">
+            <span class="tag" data-i18n="tag_leadership">Leadership</span>
+            <span class="tag" data-i18n="tag_governance">Governance</span>
+            <span class="tag" data-i18n="tag_delivery">Delivery</span>
           </div>
         </div>
       </div>
@@ -575,6 +592,77 @@
       }
     });
 
+
+    function setOrCreateMeta(selector, attr, value) {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        if (selector.includes('property=')) {
+          el.setAttribute("property", selector.match(/property="([^"]+)"/)[1]);
+        } else if (selector.includes('name=')) {
+          el.setAttribute("name", selector.match(/name="([^"]+)"/)[1]);
+        }
+        document.head.appendChild(el);
+      }
+      el.setAttribute(attr, value);
+    }
+
+    function setLinkRel(rel, hreflang, href) {
+      const selector = hreflang
+        ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+        : `link[rel="${rel}"]`;
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        if (hreflang) el.setAttribute("hreflang", hreflang);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    }
+
+    function applySeoForLang(lang) {
+      const base = (window.SITE_URL || "https://tsahimur.mn").replace(/\/+$/, "");
+      const home = `${base}/`;
+      const seo = {
+        en: {
+          htmlLang: "en",
+          ogLocale: "en_US",
+          title: "Tsahimur LLC — IT Consulting & System Development",
+          desc: "Practical IT consulting and reliable system development. We design, build, and modernize scalable digital systems with disciplined execution.",
+          url: `${home}?lang=en`
+        },
+        mn: {
+          htmlLang: "mn",
+          ogLocale: "mn_MN",
+          title: "Tsahimur LLC — IT зөвлөх үйлчилгээ ба систем хөгжүүлэлт",
+          desc: "Практик IT зөвлөх үйлчилгээ, найдвартай систем хөгжүүлэлт. Бид тэлэх боломжтой дижитал системийг төлөвлөж, хөгжүүлж, шинэчилнэ.",
+          url: `${home}?lang=mn`
+        }
+      };
+
+      const cfg = seo[lang] || seo.en;
+      document.documentElement.lang = cfg.htmlLang;
+      document.title = cfg.title;
+      setOrCreateMeta('meta[name="description"]', "content", cfg.desc);
+      setOrCreateMeta('meta[property="og:title"]', "content", cfg.title);
+      setOrCreateMeta('meta[property="og:description"]', "content", cfg.desc);
+      setOrCreateMeta('meta[property="og:url"]', "content", cfg.url);
+      setOrCreateMeta('meta[property="og:locale"]', "content", cfg.ogLocale);
+      setOrCreateMeta('meta[name="twitter:title"]', "content", cfg.title);
+      setOrCreateMeta('meta[name="twitter:description"]', "content", cfg.desc);
+      setLinkRel("canonical", null, home);
+      setLinkRel("alternate", "en", `${home}?lang=en`);
+      setLinkRel("alternate", "mn", `${home}?lang=mn`);
+      setLinkRel("alternate", "x-default", `${home}?lang=en`);
+    }
+
+    function getLangFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const lang = (params.get("lang") || "").toLowerCase();
+      return lang === "en" || lang === "mn" ? lang : null;
+    }
+
     // Content dictionary for all editable website copy (EN/MN).
     // If you want to update wording, do it here and keep keys unchanged.
     const i18n = {
@@ -586,43 +674,48 @@
         nav_founders: "Founders",
         nav_contact: "Contact",
         theme: "Theme",
-        start_project: "Start a Project",
+        start_project: "Start a Conversation",
         kicker: "IT Consulting • System Development",
-        h1: "Build reliable systems that scale with your business.",
-        sub: "Tsahimur LLC helps teams design, modernize, and deliver software—clean architecture, strong execution, and measurable outcomes.",
-        cta_contact: "Contact Us",
-        cta_services: "Explore Services",
-        chip_delivery: "End-to-end delivery",
-        chip_modern: "Modern tech stack",
-        chip_security: "Security-minded",
-        stat1_title: "Consulting that unblocks delivery",
-        stat1_desc: "Architecture review, roadmap planning, and pragmatic guidance to ship faster with fewer surprises.",
-        stat2_title: "System development you can maintain",
-        stat2_desc: "Well-structured codebases, documentation, tests, and CI/CD—built for long-term ownership.",
-        stat3_title: "Strong leadership, broad experience",
-        stat3_desc: "Founded by senior practitioners with experience across multiple industries and systems.",
+        h1: "Practical IT consulting. Reliable system development.",
+        sub: "We help organizations design, build, and modernize digital systems that scale with business growth. Clear architecture. Disciplined execution. Measurable results.",
+        cta_contact: "Start a Conversation",
+        cta_services: "What We Do",
+        chip_delivery: "Founder-led execution",
+        chip_modern: "Business-oriented engineering",
+        chip_security: "Scalable by design",
+        stat1_title: "Founder-Led Execution",
+        stat1_desc: "Every project is guided directly by experienced founders.",
+        stat2_title: "Business-Oriented Engineering",
+        stat2_desc: "We prioritize clarity, accountability, and measurable outcomes — not just code delivery.",
+        stat3_title: "Scalable by Design",
+        stat3_desc: "We build systems that grow with your organization.",
         // Services
-        services_title: "Services",
-        services_note: "Small, focused offerings that cover strategy → delivery → ongoing support.",
-        svc1_title: "IT Consulting & Architecture",
-        svc1_desc: "System design, audits, modernization plans, and technical leadership for teams and stakeholders.",
-        svc2_title: "System Development",
-        svc2_desc: "Web platforms, APIs, integrations, and internal tools—implemented with clean, scalable patterns.",
-        svc3_title: "Delivery Enablement",
-        svc3_desc: "CI/CD pipelines, environments, monitoring, and developer workflows that improve reliability.",
+        services_title: "What We Do",
+        services_note: "Executive-focused services aligned with growth, reliability, and long-term value.",
+        svc1_title: "IT Strategy & Architecture",
+        svc1_desc: "We assess current systems, define scalable architecture, and align technology decisions with business goals.",
+        svc2_title: "Custom System Development",
+        svc2_desc: "We design and build secure, maintainable web platforms, APIs, and enterprise applications.",
+        svc3_title: "System Modernization",
+        svc3_desc: "We refactor legacy systems, improve performance, and prepare infrastructure for long-term scalability.",
         tag_arch: "Architecture",
         tag_roadmap: "Roadmap",
         tag_review: "Review",
         tag_web: "Web",
         tag_api: "API",
         tag_integration: "Integration",
-        tag_cicd: "CI/CD",
-        tag_devops: "DevOps",
-        tag_observability: "Observability",
+        tag_modernization: "Modernization",
+        tag_performance: "Performance",
+        tag_scalability: "Scalability",
+        tag_leadership: "Leadership",
+        tag_governance: "Governance",
+        tag_delivery: "Delivery",
+        svc4_title: "Delivery & Technical Leadership",
+        svc4_desc: "We provide senior-level technical leadership, architecture oversight, and delivery governance.",
         // About + Founders
         about_title: "About Tsahimur",
-        about_note: "We work best with teams that value clarity, accountability, and engineering discipline.",
-        about_body: "Tsahimur LLC is an IT consulting and system development company. We help clients turn business needs into well-designed, production-ready software. Our approach emphasizes pragmatic architecture, measurable delivery, and maintainable systems.",
+        about_note: "Built for CEOs, CIOs, and operations leaders who need dependable execution.",
+        about_body: "Tsahimur LLC is an IT consulting and system development company founded by senior practitioners with broad cross-industry experience. We work with growing companies, financial institutions, and technology-driven organizations to build resilient digital systems.",
         founders_title: "Founders",
         founders_note: "Connect with the founders on LinkedIn.",
         gn_desc: "Co-founder. IT consulting & system development leadership.",
@@ -630,14 +723,14 @@
         linkedin: "LinkedIn Profile",
         // Contact + Footer
         contact_title: "Contact",
-        contact_note: "Replace the placeholders below with your real email/phone when ready.",
-        contact_card_title: "Let’s talk about your project",
+        contact_note: "Let’s discuss how technology can support your next phase of growth.",
+        contact_card_title: "Let’s discuss your growth roadmap",
         contact_email_label: "Email",
         contact_phone_label: "Phone",
-        email_us: "Email Us",
+        email_us: "Start a Conversation",
         back_top: "Back to Top",
         rights: "All rights reserved.",
-        foot_note: "Minimal SPA • Static Hosting Ready"
+        foot_note: "Founder-led consulting • Execution-focused delivery"
       },
       mn: {
         // Navigation + Hero
@@ -647,43 +740,48 @@
         nav_founders: "Үүсгэн байгуулагчид",
         nav_contact: "Холбоо барих",
         theme: "Загвар",
-        start_project: "Төслийг эхлүүлэх",
+        start_project: "Холбоо барих",
         kicker: "IT зөвлөх үйлчилгээ • Систем хөгжүүлэлт",
-        h1: "Бизнес тань өсөхөд дагаж тэлэх найдвартай систем бүтээнэ.",
-        sub: "Tsahimur LLC нь системийн зураглал, шинэчлэл, хөгжүүлэлт, нэвтрүүлэлтийг бодит үр дүнтэйгээр гүйцэтгэнэ—цэвэр архитектур, хүчтэй гүйцэтгэл, хэмжигдэхүйц үр дүн.",
+        h1: "Практик IT зөвлөх үйлчилгээ. Найдвартай систем хөгжүүлэлт.",
+        sub: "Бид байгууллагуудад бизнесийн өсөлтийг дагаж тэлэх дижитал системийг төлөвлөх, хөгжүүлэх, шинэчлэхэд дэмжлэг үзүүлдэг. Тодорхой архитектур. Сахилга баттай гүйцэтгэл. Хэмжигдэхүйц үр дүн.",
         cta_contact: "Холбоо барих",
-        cta_services: "Үйлчилгээг үзэх",
-        chip_delivery: "Эцсээс нь хүртэл гүйцэтгэл",
-        chip_modern: "Орчин үеийн технологи",
-        chip_security: "Аюулгүй байдлыг нэн тэргүүнд",
-        stat1_title: "Хүргэлтийг хурдлуулах зөвлөгөө",
-        stat1_desc: "Архитектурын үнэлгээ, замын зураг, практик зөвлөмж—илүү хурдан, эрсдэл багатай хүргэлт.",
-        stat2_title: "Арчилж хөгжүүлэх боломжтой хөгжүүлэлт",
-        stat2_desc: "Бүтэцтэй код, баримтжуулалт, тест, CI/CD—урт хугацааны эзэмшилд тохиромжтой.",
-        stat3_title: "Туршлагатай, өргөн хүрээний мэдлэг",
-        stat3_desc: "Олон салбар, олон төрлийн систем дээр ажилласан ахлах түвшний мэргэжилтнүүдийн баг.",
+        cta_services: "Үйлчилгээ",
+        chip_delivery: "Үүсгэн байгуулагчийн шууд оролцоо",
+        chip_modern: "Бизнес төвтэй инженерчлэл",
+        chip_security: "Тэлэх боломжтой архитектур",
+        stat1_title: "Үүсгэн байгуулагчийн шууд оролцоо",
+        stat1_desc: "Төсөл бүрийг туршлагатай үүсгэн байгуулагчид өөрсдөө удирдана.",
+        stat2_title: "Бизнес төвтэй инженерчлэл",
+        stat2_desc: "Зөвхөн код биш — тодорхой байдал, хариуцлага, хэмжигдэхүйц үр дүнд төвлөрнө.",
+        stat3_title: "Тэлэх боломжтой архитектур",
+        stat3_desc: "Байгууллагын өсөлтийг дагаж хөгжих системийг бүтээнэ.",
         // Services
         services_title: "Үйлчилгээ",
-        services_note: "Стратеги → хөгжүүлэлт → дэмжлэг хүртэлх багц шийдлүүд.",
+        services_note: "Удирдлагын түвшинд ойлгомжтой, өсөлт ба найдвартай ажиллагаанд чиглэсэн үйлчилгээ.",
         svc1_title: "IT зөвлөх үйлчилгээ & Архитектур",
-        svc1_desc: "Системийн зураглал, аудит, шинэчлэлийн төлөвлөгөө, техникийн манлайлал.",
+        svc1_desc: "Одоогийн системийг үнэлж, тэлэх боломжтой архитектур тодорхойлж, технологийн шийдвэрийг бизнесийн зорилготой уялдуулна.",
         svc2_title: "Систем хөгжүүлэлт",
-        svc2_desc: "Вэб платформ, API, интеграци, дотоод хэрэгслүүд—цэвэр, тэлэх боломжтой загвараар.",
-        svc3_title: "Хүргэлт ба DevOps сайжруулалт",
-        svc3_desc: "CI/CD, орчин тохиргоо, мониторинг, хөгжүүлэгчийн ажлын урсгал—найдвартай ажиллагааг өсгөнө.",
+        svc2_desc: "Аюулгүй, арчилж хөгжүүлэх боломжтой вэб платформ, API болон байгууллагын системийг төлөвлөж, хэрэгжүүлнэ.",
+        svc3_title: "Системийн шинэчлэл",
+        svc3_desc: "Хуучин системийг сайжруулж, гүйцэтгэлийг нэмэгдүүлж, урт хугацаанд тэлэхэд бэлтгэнэ.",
         tag_arch: "Архитектур",
         tag_roadmap: "Замын зураг",
         tag_review: "Үнэлгээ",
         tag_web: "Вэб",
         tag_api: "API",
         tag_integration: "Интеграци",
-        tag_cicd: "CI/CD",
-        tag_devops: "DevOps",
-        tag_observability: "Мониторинг",
+        tag_modernization: "Шинэчлэл",
+        tag_performance: "Гүйцэтгэл",
+        tag_scalability: "Тэлэлт",
+        tag_leadership: "Манлайлал",
+        tag_governance: "Удирдлага",
+        tag_delivery: "Хүргэлт",
+        svc4_title: "Техникийн манлайлал",
+        svc4_desc: "Ахлах түвшний архитектур, техникийн хяналт, хүргэлтийн удирдлагаар дэмжинэ.",
         // About + Founders
         about_title: "Tsahimur тухай",
-        about_note: "Тодорхой байдал, хариуцлага, инженерийн сахилга батыг эрхэмлэдэг багуудтай сайн нийцдэг.",
-        about_body: "Tsahimur LLC нь IT зөвлөх үйлчилгээ болон систем хөгжүүлэлтийн компани. Бизнесийн хэрэгцээг сайн төлөвлөсөн, продакшнд бэлэн шийдэл болгон хэрэгжүүлнэ. Бид прагматик архитектур, хэмжигдэхүйц хүргэлт, арчилж хөгжүүлэх боломжтой системд төвлөрдөг.",
+        about_note: "CEO, CIO болон үйл ажиллагааны удирдлагад ойлгомжтой, найдвартай гүйцэтгэл.",
+        about_body: "Tsahimur LLC нь олон салбарын туршлагатай ахлах түвшний мэргэжилтнүүдийн үүсгэн байгуулсан IT зөвлөх үйлчилгээ болон систем хөгжүүлэлтийн компани юм. Бид өсөн тэлж буй байгууллага, санхүүгийн байгууллага, технологид суурилсан компаниудтай хамтран найдвартай дижитал систем бүтээнэ.",
         founders_title: "Үүсгэн байгуулагчид",
         founders_note: "LinkedIn дээр холбогдоорой.",
         gn_desc: "Үүсгэн байгуулагч. IT зөвлөх үйлчилгээ ба систем хөгжүүлэлтийн манлайлал.",
@@ -691,14 +789,14 @@
         linkedin: "LinkedIn",
         // Contact + Footer
         contact_title: "Холбоо барих",
-        contact_note: "Бэлэн болмогц имэйл/утсаа жинхэнээр нь солино уу.",
-        contact_card_title: "Төслийн талаар ярилцъя",
+        contact_note: "Технологи танай байгууллагын дараагийн өсөлтийн үе шатанд хэрхэн дэмжлэг үзүүлэх талаар ярилцъя.",
+        contact_card_title: "Өсөлтийн дараагийн алхмаа ярилцъя",
         contact_email_label: "Имэйл",
         contact_phone_label: "Утас",
-        email_us: "Имэйл илгээх",
+        email_us: "Холбоо барих",
         back_top: "Дээш буцах",
         rights: "Бүх эрх хуулиар хамгаалагдсан.",
-        foot_note: "Minimal SPA • Static hosting-д бэлэн"
+        foot_note: "Үүсгэн байгуулагчийн удирдлага • Үр дүнд чиглэсэн гүйцэтгэл"
       }
     };
 
@@ -720,10 +818,17 @@
       });
 
       localStorage.setItem("tsahimur_lang", lang);
+      applySeoForLang(lang);
+
+      const params = new URLSearchParams(window.location.search);
+      params.set("lang", lang);
+      history.replaceState(null, "", `${window.location.pathname}?${params.toString()}${window.location.hash}`);
     }
 
+    const urlLang = getLangFromUrl();
     const savedLang = localStorage.getItem("tsahimur_lang") || "en";
-    applyLang(savedLang);
+    const initialLang = urlLang || savedLang;
+    applyLang(initialLang);
 
     langBtn.addEventListener("click", () => {
       const current = localStorage.getItem("tsahimur_lang") || "en";
@@ -735,7 +840,7 @@
     const obs = new IntersectionObserver((entries) => {
       const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (!visible) return;
-      history.replaceState(null, "", "#" + visible.target.id);
+      history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${visible.target.id}`);
     }, { rootMargin: "-45% 0px -50% 0px", threshold: [0.12, 0.2, 0.35] });
 
     sections.forEach(s => s && obs.observe(s));
