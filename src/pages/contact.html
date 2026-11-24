@@ -1,0 +1,48 @@
+<section class="page-hero" style="padding-bottom:140px">
+  <div class="glow" aria-hidden="true" style="width:1000px;height:1000px;left:50%;top:-500px;margin-left:-500px"></div>
+  <div class="wrap" style="position:relative">
+    <div class="eyebrow" data-fade t="ct_eyebrow"></div>
+    <h1 class="h1" data-split style="max-width:1000px" t="ct_title"></h1>
+    <p class="lead" data-fade style="margin-top:28px;max-width:620px" t="ct_sub"></p>
+    <div class="split" style="grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;margin-top:64px;align-items:start">
+      <form class="card" data-fade data-contact-form style="padding:44px;display:flex;flex-direction:column;gap:26px" novalidate>
+        <div class="g2" style="gap:18px">
+          <div class="field"><label for="f-name" t="f_name"></label><input id="f-name" name="name" class="inp" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-company" t="f_company"></label><input id="f-company" name="company" class="inp" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="field"><label for="f-email" t="f_email"></label><input id="f-email" name="email" class="inp" type="email" autocomplete="email" required></div>
+        <fieldset>
+          <legend class="legend" style="margin-bottom:12px"><span t="f_need"></span> <span style="font-weight:400;color:var(--mist)" t="f_pick"></span></legend>
+          <div class="picks" data-pick-group="multi">
+            <button type="button" class="pick" aria-pressed="false" t="svc1_t"></button><button type="button" class="pick" aria-pressed="false" t="svc2_t"></button><button type="button" class="pick" aria-pressed="false" t="svc3_t"></button><button type="button" class="pick" aria-pressed="false" t="svc4_t"></button><button type="button" class="pick" aria-pressed="false" t="svc5_t"></button><button type="button" class="pick" aria-pressed="false" t="svc6_t"></button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend" style="margin-bottom:12px" t="f_when"></legend>
+          <div class="picks" data-pick-group="single">
+            <button type="button" class="pick" aria-pressed="false" t="f_t1"></button><button type="button" class="pick" aria-pressed="false" t="f_t2"></button><button type="button" class="pick" aria-pressed="false" t="f_t3"></button><button type="button" class="pick" aria-pressed="false" t="f_t4"></button>
+          </div>
+        </fieldset>
+        <div class="field"><label for="f-msg" t="f_msg"></label><textarea id="f-msg" name="message" class="inp"></textarea></div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+          <span class="small" t="f_note"></span>
+          <button class="btn btn-v" data-magnetic type="submit"><span t="f_send"></span>{{ARROW}}</button>
+        </div>
+      </form>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card" data-fade style="padding:36px;display:flex;flex-direction:column;gap:22px">
+          <span class="foot-label" t="ct_direct"></span>
+          <a href="mailto:hello@tsahimur.mn" style="font-family:var(--font-display);font-weight:600;font-size:22px;color:var(--cloud)">hello@tsahimur.mn</a>
+          <a href="tel:+97688033277" style="font-family:var(--font-display);font-weight:600;font-size:22px;color:var(--cloud)">+976 8803 3277</a>
+          <span class="body" t="foot_loc"></span>
+        </div>
+        <div class="card" data-fade style="padding:36px;display:flex;flex-direction:column;gap:22px">
+          <span class="foot-label" t="ct_next"></span>
+          <div class="next-step"><b>1</b><span class="body" style="color:var(--silver)" t="ct_n1"></span></div>
+          <div class="next-step"><b>2</b><span class="body" style="color:var(--silver)" t="ct_n2"></span></div>
+          <div class="next-step"><b class="silver">3</b><span class="body" style="color:var(--silver)" t="ct_n3"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

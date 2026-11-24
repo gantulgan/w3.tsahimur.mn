@@ -1,711 +1,250 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tsahim-Ur LLC — IT Consulting & System Development</title>
-  <meta name="description" content="Practical IT consulting and reliable system development. We design, build, and modernize scalable digital systems with disciplined execution." />
-  <meta name="theme-color" content="#0b1220" />
-  <meta name="author" content="Tsahim-Ur LLC" />
-  <meta name="robots" content="index,follow" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="description" content="IT consulting, solution architecture and system development for payments, retail, telecom and public-sector platforms. Ulaanbaatar, since 2014.">
+  <meta name="theme-color" content="#0B0716">
+  <meta name="author" content="Tsahim-Ur LLC">
+  <meta name="robots" content="index,follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://tsahimur.mn/">
+  <link rel="alternate" hreflang="en" href="https://tsahimur.mn/?lang=en">
+  <link rel="alternate" hreflang="mn" href="https://tsahimur.mn/?lang=mn">
+  <link rel="alternate" hreflang="x-default" href="https://tsahimur.mn/">
 
-  <script>
-    window.SITE_URL = "https://tsahimur.mn";
-  </script>
+  <link rel="icon" type="image/svg+xml" href="/assets/img/logo-mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-ipad-retina-152x152.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
 
-  <meta name="keywords" content="IT consulting, system development, software architecture, web development, API integration, DevOps, Mongolia" />
-  <link rel="canonical" href="https://tsahimur.mn/" />
-  <link rel="alternate" hreflang="en" href="https://tsahimur.mn/?lang=en" />
-  <link rel="alternate" hreflang="mn" href="https://tsahimur.mn/?lang=mn" />
-  <link rel="alternate" hreflang="x-default" href="https://tsahimur.mn/?lang=en" />
-
-  <!-- Favicons (place files in /assets/favicons/) -->
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48.png">
-  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon-iphone-60x60.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-ipad-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-touch-icon-iphone-retina-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-touch-icon-ipad-retina-152x152.png">
-  <link rel="manifest" href="assets/favicons/site.webmanifest">
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Tsahim-Ur LLC — IT Consulting & System Development" />
-  <meta property="og:description" content="Practical IT consulting and reliable system development. Scalable systems, disciplined execution, measurable outcomes." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Tsahim-Ur LLC" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="mn_MN" />
-  <meta property="og:url" content="https://tsahimur.mn/" />
-  <meta property="og:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png" />
-    <meta property="og:image:alt" content="Tsahim-Ur LLC logo for social sharing previews" />
-
-  <!-- Twitter / X card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tsahim-Ur LLC — IT Consulting & System Development" />
-  <meta name="twitter:description" content="Practical IT consulting and reliable system development." />
-  <meta name="twitter:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png" />
-  <meta name="twitter:image:alt" content="Tsahim-Ur LLC logo for social sharing previews" />
-
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tsahim-Ur LLC">
+  <meta property="og:title" content="Tsahim-Ur LLC — IT Consulting & System Development">
+  <meta property="og:description" content="IT consulting, solution architecture and system development for payments, retail, telecom and public-sector platforms. Ulaanbaatar, since 2014.">
+  <meta property="og:url" content="https://tsahimur.mn/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="mn_MN">
+  <meta property="og:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png">
+  <meta property="og:image:alt" content="Tsahim-Ur LLC logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tsahim-Ur LLC — IT Consulting & System Development">
+  <meta name="twitter:description" content="IT consulting, solution architecture and system development for payments, retail, telecom and public-sector platforms. Ulaanbaatar, since 2014.">
+  <meta name="twitter:image" content="https://tsahimur.mn/assets/tsahimur_logo_transparent.png">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tsahim-Ur LLC",
-    "url": "https://tsahimur.mn/",
-    "logo": "https://tsahimur.mn/assets/tsahimur_logo_transparent.png",
-    "description": "IT consulting and system development company providing architecture, delivery, modernization, and implementation services.",
-    "sameAs": [
-      "https://www.linkedin.com/in/gantulga-nadmid/",
-      "https://www.linkedin.com/in/temuulen-bold-905349135/"
-    ]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Tsahim-Ur LLC","url":"https://tsahimur.mn/",
+   "logo":"https://tsahimur.mn/assets/tsahimur_logo_transparent.png","email":"hello@tsahimur.mn","foundingDate":"2014",
+   "address":{"@type":"PostalAddress","addressLocality":"Ulaanbaatar","addressCountry":"MN"},
+   "description":"IT consulting, solution architecture and system development company in Ulaanbaatar, Mongolia."}
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Tsahim-Ur LLC",
-    "url": "https://tsahimur.mn/",
-    "inLanguage": ["en", "mn"]
-  }
-  </script>
-
-  <style>
-    :root{
-      --bg:#f5f7fb;
-      --bg-soft:#eef2f9;
-      --card:#ffffff;
-      --text:#10192b;
-      --muted:#556079;
-      --border:#d8e0ef;
-      --accent:#6c63ff;
-      --accent-soft:rgba(108,99,255,.12);
-      --radius:20px;
-      --max:1100px;
-      --font: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-
-    [data-theme="dark"]{
-      --bg:#070d19;
-      --bg-soft:#111a2d;
-      --card:#101a2d;
-      --text:#f1f4fb;
-      --muted:#a9b6d3;
-      --border:#26324c;
-      --accent:#8b7fff;
-      --accent-soft:rgba(139,127,255,.18);
-    }
-
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:
-        radial-gradient(900px 420px at 8% 8%, var(--accent-soft), transparent 72%),
-        radial-gradient(950px 450px at 92% 18%, rgba(56,189,248,.12), transparent 74%),
-        var(--bg);
-      min-height:100vh;
-      line-height:1.5;
-    }
-    a{color:inherit;text-decoration:none;}
-    .container{max-width:var(--max);margin:0 auto;padding:0 28px;}
-
-    .nav{
-      position:sticky;top:0;z-index:50;
-      background:color-mix(in oklab,var(--bg) 90%, transparent);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px;}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.1px;}
-    .brand img{width:36px;height:36px;object-fit:contain;border-radius:12px;padding:6px;background:var(--bg-soft);border:1px solid var(--border);}
-
-    .nav-links{display:flex;align-items:center;gap:10px;color:var(--muted);font-weight:600;font-size:14px;}
-    .nav-links a{padding:9px 12px;border-radius:999px;transition:background .15s ease,color .15s ease;}
-    .nav-links a:hover{background:var(--bg-soft);color:var(--text);}
-    .nav-actions{display:flex;align-items:center;gap:10px;}
-
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:10px 16px;border-radius:999px;border:1px solid var(--border);
-      background:var(--card);color:var(--text);font-weight:600;font-size:14px;cursor:pointer;
-      transition:transform .15s ease, background .15s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px);background:var(--bg-soft);}
-    .btn.primary{background:var(--accent);color:#fff;border-color:transparent;}
-    .btn.primary:hover{background:color-mix(in oklab,var(--accent) 88%, black);}
-    .btn.small{padding:8px 12px;font-size:13px;}
-    .icon{width:16px;height:16px;display:inline-block;}
-
-    .hero{padding:72px 0 32px;}
-    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;align-items:stretch;}
-    .panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);}
-    .hero-main{padding:38px;}
-    .kicker{
-      display:inline-flex;align-items:center;gap:8px;padding:7px 12px;
-      border-radius:999px;background:var(--bg-soft);border:1px solid var(--border);
-      color:var(--muted);font-weight:700;font-size:12px;letter-spacing:.25px;text-transform:uppercase;
-    }
-    h1{margin:18px 0 14px;font-size:46px;line-height:1.03;letter-spacing:-1px;max-width:16ch;}
-    .sub{margin:0;color:var(--muted);font-size:17px;line-height:1.75;max-width:62ch;}
-    .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:13px;font-weight:600;}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg-soft);}
-    .hero-side{padding:18px;display:flex;flex-direction:column;gap:10px;background:var(--bg-soft);}
-    .stat{padding:16px;border-radius:16px;border:1px solid var(--border);background:var(--card);}
-    .stat b{display:block;font-size:14px;margin-bottom:6px;}
-    .stat p{margin:0;color:var(--muted);font-size:13px;line-height:1.6;}
-    .stat .small{font-size:12px;}
-
-    section{padding:34px 0;}
-    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px;}
-    .section-title{margin:0;font-size:22px;letter-spacing:-.3px;}
-    .section-note{margin:0;color:var(--muted);font-size:14px;max-width:64ch;line-height:1.7;}
-
-    .grid-3{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-    .card{padding:20px;border-radius:18px;border:1px solid var(--border);background:var(--card);}
-    .card h3{margin:0 0 8px;font-size:16px;}
-    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7;}
-    .card .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-    .tag{padding:5px 10px;border-radius:999px;border:1px solid var(--border);background:var(--bg-soft);color:var(--muted);font-size:12px;font-weight:700;}
-
-    .founders{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    .person{display:flex;gap:12px;align-items:flex-start;padding:18px;border-radius:18px;border:1px solid var(--border);background:var(--card);}
-    .avatar{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent);background:var(--accent-soft);border:1px solid var(--border);flex:0 0 auto;}
-    .person h4{margin:0;font-size:15px;}
-    .person p{margin:6px 0 12px;color:var(--muted);font-size:13px;line-height:1.6;}
-    .person a.link{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;border:1px solid var(--border);font-size:13px;font-weight:700;background:var(--bg-soft);}
-
-    footer{padding:26px 0 42px;color:var(--muted);font-size:13px;}
-    .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--border);padding-top:18px;flex-wrap:wrap;}
-
-    @media (max-width: 920px){
-      .hero-grid,.founders,.grid-3{grid-template-columns:1fr;}
-      h1{font-size:38px;max-width:unset;}
-    }
-    @media (max-width: 780px){
-      .container{padding:0 16px;}
-      .nav-links{display:none;}
-      .hero{padding-top:46px;}
-      .hero-main{padding:24px;}
-      h1{font-size:33px;}
-    }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/site.css?v=202611241729">
+  <script>window.SITE_URL = "https://tsahimur.mn";</script>
 </head>
+<body data-page="home">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Tsahim-Ur home">
+      <svg aria-hidden="true" viewBox="4 2 856 730"><g fill="none" stroke="#8636DF" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"><polyline points="358,86 504,226 646,366 776,228"/><polyline points="646,366 512,500 380,640 228,500 86,362"/></g><g fill="#8636DF"><circle cx="358" cy="86" r="82"/><circle cx="504" cy="226" r="84"/><circle cx="646" cy="366" r="82"/><circle cx="776" cy="228" r="84"/><circle cx="512" cy="500" r="84"/><circle cx="380" cy="640" r="88"/><circle cx="228" cy="500" r="82"/><circle cx="86" cy="362" r="80"/></g><g fill="#D8D7DC"><circle cx="222" cy="224" r="76"/><circle cx="358" cy="356" r="78"/></g></svg>
+      <span>Tsahim‑Ur</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="navlink" href="/services/"  data-i18n="nav_services">Services</a>
+      <a class="navlink" href="/solutions/"  data-i18n="nav_solutions">Solutions</a>
+      <a class="navlink" href="/about/"  data-i18n="nav_about">About</a>
+      <a class="navlink" href="/contact/"  data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-btn" type="button" data-lang-toggle data-i18n-aria="lang_switch" aria-label="Switch language"><span data-lang-label>MN</span></button>
+      <a class="btn btn-v header-cta" data-magnetic href="/contact/" data-i18n="cta_book">Book a consultation</a>
+      <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="menu" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile">
+    <a class="navlink" href="/" data-i18n="nav_home">Home</a>
+    <a class="navlink" href="/services/" data-i18n="nav_services">Services</a>
+    <a class="navlink" href="/solutions/" data-i18n="nav_solutions">Solutions</a>
+    <a class="navlink" href="/about/" data-i18n="nav_about">About</a>
+    <a class="btn btn-v" href="/contact/" style="margin-top:8px;justify-content:center" data-i18n="cta_book">Book a consultation</a>
+  </nav>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="hero-spot" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true" style="width:1100px;height:1100px;right:-280px;top:-200px"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge" data-fade><i></i><span data-i18n="hero_badge">Technology consultancy · Ulaanbaatar</span></div>
+      <h1 class="h1" data-split data-i18n="hero_title">Architecture &amp; engineering for systems that <span class="ac">can’t fail.</span></h1>
+      <p class="lead" data-fade style="margin-top:34px;max-width:560px" data-i18n="hero_sub">IT consulting, solution architecture and system development for payments, retail, telecom and public‑sector platforms — from Ulaanbaatar, for Mongolia and beyond.</p>
+      <div data-fade style="display:flex;flex-wrap:wrap;gap:14px;margin-top:40px">
+        <a class="btn btn-v" data-magnetic href="/contact/"><span data-i18n="cta_book">Book a consultation</span><svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-o" data-magnetic href="/services/" data-i18n="cta_services">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-mark" data-tilt>
+      <svg role="img" aria-label="Tsahim-Ur logo" data-mark viewBox="-40 -40 936 810">
+        <g fill="none" stroke="#A675F0" stroke-width="3">
+          <circle data-pulse cx="776" cy="228" r="84"/><circle data-pulse cx="86" cy="362" r="80"/><circle data-pulse cx="380" cy="640" r="88"/><circle data-pulse cx="358" cy="86" r="82"/>
+        </g>
+        <g fill="none" stroke="#8636DF" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+          <polyline data-conn points="358,86 504,226 646,366 776,228"/>
+          <polyline data-conn points="646,366 512,500 380,640 228,500 86,362"/>
+        </g>
+        <g fill="#8636DF">
+          <circle data-node cx="86" cy="362" r="80"/><circle data-node cx="228" cy="500" r="82"/><circle data-node cx="380" cy="640" r="88"/><circle data-node cx="512" cy="500" r="84"/><circle data-node cx="646" cy="366" r="82"/><circle data-node cx="504" cy="226" r="84"/><circle data-node cx="358" cy="86" r="82"/><circle data-node cx="776" cy="228" r="84"/>
+        </g>
+        <g fill="#D8D7DC"><circle data-silver cx="222" cy="224" r="76"/><circle data-silver cx="358" cy="356" r="78"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap g4 stats" data-fade>
+    <div><div class="num"><span data-count="2014">2014</span></div><div class="small" style="margin-top:6px" data-i18n="stat1">founded in Ulaanbaatar</div></div>
+    <div><div class="num"><span data-count="6">6</span></div><div class="small" style="margin-top:6px" data-i18n="stat2">service lines, strategy to support</div></div>
+    <div><div class="num"><span data-count="6">6</span></div><div class="small" style="margin-top:6px" data-i18n="stat3">industries served</div></div>
+    <div><div class="num">MN<span class="ac"> · </span>EN</div><div class="small" style="margin-top:6px" data-i18n="stat4">working languages</div></div>
+  </div>
+</section>
 
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Tsahim-Ur home">
-        <img src="assets/tsahimur_logo_transparent.png" alt="Tsahim-Ur logo">
-        <span data-i18n="brand">Tsahim-Ur LLC</span>
-      </a>
+<section class="strip" aria-labelledby="strip-label">
+  <div class="wrap mono" id="strip-label" style="font-size:11px;letter-spacing:.18em;color:var(--mist);margin-bottom:18px;text-transform:uppercase" data-i18n="strip_label">Our team has built technology for</div>
+  <div class="strip-track">
+    <div class="marquee" data-marquee>
+      <span style="display:inline-flex;gap:56px;align-items:center;padding-right:56px"><span data-i18n="strip1">Remittance</span><b>●</b><span data-i18n="strip2">Payments</span><b>●</b><span data-i18n="strip3">Retail platforms</span><b>●</b><span data-i18n="strip4">E‑commerce</span><b>●</b><span data-i18n="strip5">Telecom</span><b>●</b><span data-i18n="strip6">International development</span><b>●</b><span data-i18n="strip7">Healthcare data</span><b>●</b><span data-i18n="strip8">Climate tech</span><b>●</b></span><span aria-hidden="true" style="display:inline-flex;gap:56px;align-items:center;padding-right:56px"><span data-i18n="strip1">Remittance</span><b>●</b><span data-i18n="strip2">Payments</span><b>●</b><span data-i18n="strip3">Retail platforms</span><b>●</b><span data-i18n="strip4">E‑commerce</span><b>●</b><span data-i18n="strip5">Telecom</span><b>●</b><span data-i18n="strip6">International development</span><b>●</b><span data-i18n="strip7">Healthcare data</span><b>●</b><span data-i18n="strip8">Climate tech</span><b>●</b></span>
+    </div>
+  </div>
+</section>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#about" data-i18n="nav_about">About</a>
-        <a href="#founders" data-i18n="nav_founders">Founders</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
+<section style="padding:150px 0 120px">
+  <div class="wrap">
+    <div class="head-row">
+      <div><div class="eyebrow" data-reveal data-i18n="hs_eyebrow">(01) — What we do</div><h2 class="h2" data-reveal data-i18n="hs_title">Senior expertise,<br><span class="ac">from first sketch to production.</span></h2></div>
+      <a class="arrow-link" data-reveal href="/services/" data-i18n="hs_all">All services →</a>
+    </div>
+    <div class="g3">
+      <a class="card pad" data-stagger href="/services/#s1" style="min-height:300px"><span class="mono ac" style="font-size:13px">01</span><h3 class="h3" data-i18n="svc1_t">IT consulting &amp; architecture</h3><p class="body" data-i18n="svc1_d">Architecture reviews, technology strategy and roadmaps that make the next two years of delivery predictable.</p><span class="arrow-link" style="margin-top:auto" data-i18n="learn_more">Learn more →</span></a>
+      <a class="card pad" data-stagger href="/services/#s2" style="min-height:300px"><span class="mono ac" style="font-size:13px">02</span><h3 class="h3" data-i18n="svc2_t">System development</h3><p class="body" data-i18n="svc2_d">Web platforms, APIs and internal tools in .NET, Java, Node and Nuxt — built with tests, CI/CD and documentation.</p><span class="arrow-link" style="margin-top:auto" data-i18n="learn_more">Learn more →</span></a>
+      <a class="card pad" data-stagger href="/services/#s3" style="min-height:300px"><span class="mono ac" style="font-size:13px">03</span><h3 class="h3" data-i18n="svc3_t">Legacy modernization</h3><p class="body" data-i18n="svc3_d">Moving aging systems onto modern, maintainable stacks without stopping the business.</p><span class="arrow-link" style="margin-top:auto" data-i18n="learn_more">Learn more →</span></a>
+      <a class="card pad" data-stagger href="/services/#s4" style="min-height:300px"><span class="mono ac" style="font-size:13px">04</span><h3 class="h3" data-i18n="svc4_t">Payments &amp; fintech integration</h3><p class="body" data-i18n="svc4_d">Checkout, webhooks, refunds and reconciliation — integration patterns proven in remittance and e‑commerce.</p><span class="arrow-link" style="margin-top:auto" data-i18n="learn_more">Learn more →</span></a>
+      <a class="card pad" data-stagger href="/services/#s5" style="min-height:300px"><span class="mono ac" style="font-size:13px">05</span><h3 class="h3" data-i18n="svc5_t">Fractional CTO &amp; leadership</h3><p class="body" data-i18n="svc5_d">Senior technical leadership on demand: team building, Scrum coaching, architecture oversight and board‑level advice.</p><span class="arrow-link" style="margin-top:auto" data-i18n="learn_more">Learn more →</span></a>
+      <a class="card pad feature" data-stagger href="/services/#s6" style="min-height:300px"><span class="mono" style="font-size:13px;color:#EBDDFF" data-i18n="svc6_badge">06 · NEW</span><h3 class="h3" data-i18n="svc6_t">Smart retail · E‑TAG</h3><p style="margin:0;font-size:16px;line-height:1.65;color:#F1E9FF" data-i18n="svc6_d">Electronic shelf labels and automated pricing, integrated with your POS and ERP.</p><span style="margin-top:auto;font-weight:600;font-size:15px" data-i18n="learn_more">Learn more →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split" style="grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);align-items:start">
+    <div>
+      <div class="eyebrow" data-reveal data-i18n="hi_eyebrow">(02) — Industries</div>
+      <h2 class="h2 sm" data-reveal data-i18n="hi_title">Where we’ve done the hard parts.</h2>
+      <a class="arrow-link" data-reveal href="/solutions/" style="margin-top:28px" data-i18n="hi_link">Solutions by industry →</a>
+    </div>
+    <div data-reveal style="display:flex;flex-wrap:wrap;gap:12px">
+      <span class="pill" data-i18n="chip1">Fintech &amp; remittance</span><span class="pill" data-i18n="chip2">Payments</span><span class="pill" data-i18n="chip3">Retail &amp; e‑commerce</span><span class="pill" data-i18n="chip4">Telecommunications</span><span class="pill" data-i18n="chip5">International development</span><span class="pill" data-i18n="chip6">Healthcare information</span><span class="pill" data-i18n="chip7">Data &amp; analytics</span><span class="pill" data-i18n="chip8">Climate tech</span><span class="pill" data-i18n="chip9">Real estate</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal data-i18n="why_eyebrow">(03) — Why Tsahim‑Ur</div>
+    <h2 class="h2" data-reveal style="margin-bottom:60px" data-i18n="why_title">Senior team.<br><span class="ac">Small overhead.</span></h2>
+    <div class="g4">
+      <div class="card pad" data-stagger><span class="mono ac" style="font-size:13px">01</span><h3 class="h3" data-i18n="why1_t">Direct access to senior engineers</h3><p class="body" data-i18n="why1_d">The people who scope your project design and lead it.</p></div>
+      <div class="card pad" data-stagger><span class="mono ac" style="font-size:13px">02</span><h3 class="h3" data-i18n="why2_t">Strategy and delivery together</h3><p class="body" data-i18n="why2_d">From architecture review to working software and support.</p></div>
+      <div class="card pad" data-stagger><span class="mono ac" style="font-size:13px">03</span><h3 class="h3" data-i18n="why3_t">Cross‑industry experience</h3><p class="body" data-i18n="why3_d">Fintech, retail, telecom, public sector and data.</p></div>
+      <div class="card pad" data-stagger><span class="mono ac" style="font-size:13px">04</span><h3 class="h3" data-i18n="why4_t">Built for ownership</h3><p class="body" data-i18n="why4_d">Tests, CI/CD and documentation, so your team can run it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-path-sec style="padding-bottom:160px">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal data-i18n="how_eyebrow">(04) — How we work</div>
+    <h2 class="h2" data-reveal style="margin-bottom:70px" data-i18n="how_title">Every engagement is a <span class="ac">connected path.</span></h2>
+    <div class="path">
+      <div class="path-line" aria-hidden="true"><i data-pathline></i></div>
+      <ol class="g4" style="position:relative;margin:0;padding:0;list-style:none">
+        <li class="step"><span class="step-node">1</span><h3 class="h3" data-i18n="how1_t">Assess</h3><p class="body" data-i18n="how1_d">We study your systems, team and goals — then name the real risks and the fastest safe path.</p></li>
+        <li class="step"><span class="step-node">2</span><h3 class="h3" data-i18n="how2_t">Architect</h3><p class="body" data-i18n="how2_d">A target architecture, integration plan and roadmap you can share with your board and your engineers.</p></li>
+        <li class="step"><span class="step-node">3</span><h3 class="h3" data-i18n="how3_t">Build</h3><p class="body" data-i18n="how3_d">Delivery in short, visible increments — with tests, CI/CD and documentation from day one.</p></li>
+        <li class="step"><span class="step-node silver">4</span><h3 class="h3" data-i18n="how4_t">Hand over</h3><p class="body" data-i18n="how4_d">Your team owns the result. We stay on as advisors when you want a senior voice in the room.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:160px">
+  <div class="wrap">
+    <div class="card split" data-reveal style="padding:56px;align-items:center;gap:48px">
+      <div><div class="eyebrow" style="margin-bottom:20px" data-i18n="ha_eyebrow">(05) — About us</div><h2 class="h2 sm" data-i18n="ha_title">An Ulaanbaatar consultancy, <span class="ac">since 2014.</span></h2></div>
+      <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start"><p class="lead" style="font-size:17px" data-i18n="ha_body">Founded by senior engineers who believe in clarity, accountability and engineering discipline — and in leaving every client stronger than we found them.</p><a class="arrow-link" href="/about/" data-i18n="ha_link">More about us →</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<section class="cta-band">
+  <svg class="mark" aria-hidden="true" viewBox="4 2 856 730"><g fill="none" stroke="#fff" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"><polyline points="358,86 504,226 646,366 776,228"/><polyline points="646,366 512,500 380,640 228,500 86,362"/></g><g fill="#fff"><circle cx="358" cy="86" r="82"/><circle cx="504" cy="226" r="84"/><circle cx="646" cy="366" r="82"/><circle cx="776" cy="228" r="84"/><circle cx="512" cy="500" r="84"/><circle cx="380" cy="640" r="88"/><circle cx="228" cy="500" r="82"/><circle cx="86" cy="362" r="80"/><circle cx="222" cy="224" r="76"/><circle cx="358" cy="356" r="78"/></g></svg>
+  <div class="wrap">
+    <div style="max-width:760px">
+      <div class="eyebrow" data-reveal style="color:#EBDDFF" data-i18n="band_eyebrow">Have a system that has to work?</div>
+      <h2 class="h2" data-reveal style="color:#fff" data-i18n="band_title">Let’s talk about your project.</h2>
+    </div>
+    <div data-reveal style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn btn-w" data-magnetic href="/contact/" data-i18n="cta_book">Book a consultation</a>
+      <a class="btn btn-ow" data-magnetic href="mailto:hello@tsahimur.mn">hello@tsahimur.mn</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="gap:18px">
+        <span class="brand"><svg aria-hidden="true" viewBox="4 2 856 730"><g fill="none" stroke="#8636DF" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"><polyline points="358,86 504,226 646,366 776,228"/><polyline points="646,366 512,500 380,640 228,500 86,362"/></g><g fill="#8636DF"><circle cx="358" cy="86" r="82"/><circle cx="504" cy="226" r="84"/><circle cx="646" cy="366" r="82"/><circle cx="776" cy="228" r="84"/><circle cx="512" cy="500" r="84"/><circle cx="380" cy="640" r="88"/><circle cx="228" cy="500" r="82"/><circle cx="86" cy="362" r="80"/></g><g fill="#D8D7DC"><circle cx="222" cy="224" r="76"/><circle cx="358" cy="356" r="78"/></g></svg><span>Tsahim‑Ur LLC</span></span>
+        <p class="small" style="margin:0;max-width:320px" data-i18n="foot_tag">IT consulting, solution architecture and system development. Ulaanbaatar, Mongolia — since 2014.</p>
+      </div>
+      <nav class="foot-col" aria-label="Footer">
+        <span class="foot-label" data-i18n="foot_pages">Pages</span>
+        <a class="navlink" href="/services/" data-i18n="nav_services">Services</a>
+        <a class="navlink" href="/solutions/" data-i18n="nav_solutions">Solutions</a>
+        <a class="navlink" href="/about/" data-i18n="nav_about">About</a>
+        <a class="navlink" href="/contact/" data-i18n="nav_contact">Contact</a>
       </nav>
-
-      <div class="nav-actions">
-        <button class="btn small" id="langBtn" type="button" aria-label="Toggle language">
-          <span id="langLabel">MN</span>
-        </button>
-
-        <button class="btn" id="themeBtn" type="button" aria-label="Toggle theme">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span data-i18n="theme">Theme</span>
-        </button>
-
-        <a class="btn primary" href="#contact">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/>
-            <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span data-i18n="start_project">Start a Project</span>
-        </a>
+      <div class="foot-col">
+        <span class="foot-label" data-i18n="foot_services">Services</span>
+        <a class="navlink" href="/services/#s1" data-i18n="svc1_t">IT consulting &amp; architecture</a>
+        <a class="navlink" href="/services/#s2" data-i18n="svc2_t">System development</a>
+        <a class="navlink" href="/services/#s3" data-i18n="svc3_t">Legacy modernization</a>
+        <a class="navlink" href="/services/#s6" data-i18n="svc6_t">Smart retail · E‑TAG</a>
+      </div>
+      <div class="foot-col">
+        <span class="foot-label" data-i18n="foot_contact">Contact</span>
+        <a class="navlink" href="mailto:hello@tsahimur.mn">hello@tsahimur.mn</a>
+        <a class="navlink" href="tel:+97688033277">+976 8803 3277</a>
+        <span class="navlink" data-i18n="foot_loc">Ulaanbaatar, Mongolia</span>
       </div>
     </div>
-  </header>
-
-  <main id="top" class="container">
-    <div class="hero">
-      <div class="hero-grid">
-        <div class="panel hero-main">
-          <span class="kicker">
-            <span style="width:8px;height:8px;border-radius:50%;background:var(--accent2);display:inline-block"></span>
-            <span data-i18n="kicker">IT Consulting • System Development</span>
-          </span>
-
-          <h1 data-i18n="h1">Build reliable systems that scale with your business.</h1>
-          <p class="sub" data-i18n="sub">
-            Tsahim-Ur LLC helps teams design, modernize, and deliver software—clean architecture, strong execution,
-            and measurable outcomes.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn primary" href="#contact" data-i18n="cta_contact">Contact Us</a>
-            <a class="btn" href="#services" data-i18n="cta_services">Explore Services</a>
-          </div>
-
-          <div class="meta" aria-label="Highlights">
-            <span class="chip">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span data-i18n="chip_delivery">End-to-end delivery</span>
-            </span>
-            <span class="chip">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <span data-i18n="chip_modern">Modern tech stack</span>
-            </span>
-            <span class="chip">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21s7-4.35 7-10V6l-7-3-7 3v5c0 5.65 7 10 7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <span data-i18n="chip_security">Security-minded</span>
-            </span>
-          </div>
-        </div>
-
-        <aside class="panel hero-side" aria-label="Value points">
-          <div class="stat">
-            <b data-i18n="stat1_title">Consulting that unblocks delivery</b>
-            <p data-i18n="stat1_desc">Architecture review, roadmap planning, and pragmatic guidance to ship faster with fewer surprises.</p>
-          </div>
-          <div class="stat">
-            <b data-i18n="stat2_title">System development you can maintain</b>
-            <p data-i18n="stat2_desc">Well-structured codebases, documentation, tests, and CI/CD—built for long-term ownership.</p>
-          </div>
-          <div class="stat">
-            <b data-i18n="stat3_title">Strong leadership, broad experience</b>
-            <p class="small" data-i18n="stat3_desc">Founded by senior practitioners with experience across multiple industries and systems.</p>
-          </div>
-        </aside>
-      </div>
+    <div class="line" style="margin:56px 0 24px"></div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Tsahim‑Ur LLC. <span data-i18n="foot_rights">All rights reserved.</span></span>
+      <button class="lang-btn" type="button" data-lang-toggle data-i18n-aria="lang_switch" aria-label="Switch language" style="height:36px"><span data-lang-label>MN</span></button>
     </div>
-
-    <section id="services">
-      <div class="section-head">
-        <h2 class="section-title" data-i18n="services_title">Services</h2>
-        <p class="section-note" data-i18n="services_note">Small, focused offerings that cover strategy → delivery → ongoing support.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3 data-i18n="svc1_title">IT Consulting & Architecture</h3>
-          <p data-i18n="svc1_desc">System design, audits, modernization plans, and technical leadership for teams and stakeholders.</p>
-          <div class="tagrow">
-            <span class="tag" data-i18n="tag_arch">Architecture</span>
-            <span class="tag" data-i18n="tag_roadmap">Roadmap</span>
-            <span class="tag" data-i18n="tag_review">Review</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="svc2_title">System Development</h3>
-          <p data-i18n="svc2_desc">Web platforms, APIs, integrations, and internal tools—implemented with clean, scalable patterns.</p>
-          <div class="tagrow">
-            <span class="tag" data-i18n="tag_web">Web</span>
-            <span class="tag" data-i18n="tag_api">API</span>
-            <span class="tag" data-i18n="tag_integration">Integration</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="svc3_title">System Modernization</h3>
-          <p data-i18n="svc3_desc">We refactor legacy systems, improve performance, and prepare infrastructure for long-term scalability.</p>
-          <div class="tagrow">
-            <span class="tag" data-i18n="tag_modernization">Modernization</span>
-            <span class="tag" data-i18n="tag_performance">Performance</span>
-            <span class="tag" data-i18n="tag_scalability">Scalability</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="svc4_title">Delivery & Technical Leadership</h3>
-          <p data-i18n="svc4_desc">We provide senior-level technical leadership, architecture oversight, and delivery governance.</p>
-          <div class="tagrow">
-            <span class="tag" data-i18n="tag_leadership">Leadership</span>
-            <span class="tag" data-i18n="tag_governance">Governance</span>
-            <span class="tag" data-i18n="tag_delivery">Delivery</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-head">
-        <h2 class="section-title" data-i18n="about_title">About Tsahim-Ur</h2>
-        <p class="section-note" data-i18n="about_note">We work best with teams that value clarity, accountability, and engineering discipline.</p>
-      </div>
-
-      <div class="card">
-        <p style="margin:0;color:var(--muted);line-height:1.7;font-size:14px" data-i18n="about_body">
-          Tsahim-Ur LLC is an IT consulting and system development company. We help clients turn business needs into
-          well-designed, production-ready software. Our approach emphasizes pragmatic architecture, measurable delivery,
-          and maintainable systems.
-        </p>
-      </div>
-    </section>
-
-    <section id="founders">
-      <div class="section-head">
-        <h2 class="section-title" data-i18n="founders_title">Founders</h2>
-        <p class="section-note" data-i18n="founders_note">Connect with the founders on LinkedIn.</p>
-      </div>
-
-      <div class="founders">
-        <div class="person">
-          <div class="avatar" aria-hidden="true">GN</div>
-          <div>
-            <h4>Gantulga Nadmid</h4>
-            <p data-i18n="gn_desc">Co-founder. IT consulting & system development leadership.</p>
-            <a class="link" href="https://www.linkedin.com/in/gantulga-nadmid/" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6.5 9.5V18H3.5V9.5h3Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M10 18v-4.4c0-2.3 1.2-3.5 3-3.5 1.7 0 2.5 1.2 2.5 3.1V18H19V12.8C19 9.9 17.4 8 14.7 8 12.9 8 11.7 9 11.2 9.8V9.5H10V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <span data-i18n="linkedin">LinkedIn Profile</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="person">
-          <div class="avatar" aria-hidden="true">TB</div>
-          <div>
-            <h4>Temuulen Bold</h4>
-            <p data-i18n="tb_desc">Co-founder. Experienced across multiple fields and systems.</p>
-            <a class="link" href="https://www.linkedin.com/in/temuulen-bold-905349135/" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6.5 9.5V18H3.5V9.5h3Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M10 18v-4.4c0-2.3 1.2-3.5 3-3.5 1.7 0 2.5 1.2 2.5 3.1V18H19V12.8C19 9.9 17.4 8 14.7 8 12.9 8 11.7 9 11.2 9.8V9.5H10V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <span data-i18n="linkedin">LinkedIn Profile</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-head">
-        <h2 class="section-title" data-i18n="contact_title">Contact</h2>
-        <p class="section-note" data-i18n="contact_note">Replace the placeholders below with your real email/phone when ready.</p>
-      </div>
-
-      <div class="card" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
-        <div style="min-width:260px">
-          <h3 style="margin:0 0 6px;font-size:14px" data-i18n="contact_card_title">Let’s talk about your project</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
-            <span data-i18n="contact_email_label">Email</span>:
-            <span style="color:var(--text);font-weight:800">hello@tsahimur.mn</span>
-          </p>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn primary" href="mailto:hello@tsahimur.mn?subject=Project%20Inquiry%20—%20Tsahim-Ur%20LLC" data-i18n="email_us">Email Us</a>
-          <a class="btn" href="#top" data-i18n="back_top">Back to Top</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="foot">
-        <div>© <span id="year"></span> <span data-i18n="brand">Tsahim-Ur LLC</span>. <span data-i18n="rights">All rights reserved.</span></div>
-        <div style="display:flex;gap:10px;align-items:center">
-          <span style="color:var(--muted)" data-i18n="foot_note">Minimal SPA • Static Hosting Ready</span>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Theme toggle (persisted)
-    const root = document.documentElement;
-    const themeBtn = document.getElementById("themeBtn");
-    const savedTheme = localStorage.getItem("tsahimur_theme");
-    if (savedTheme === "dark") root.setAttribute("data-theme", "dark");
-
-    themeBtn.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-        localStorage.setItem("tsahimur_theme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem("tsahimur_theme", "dark");
-      }
-    });
-
-
-    function setOrCreateMeta(selector, attr, value) {
-      let el = document.querySelector(selector);
-      if (!el) {
-        el = document.createElement("meta");
-        if (selector.includes('property=')) {
-          el.setAttribute("property", selector.match(/property="([^"]+)"/)[1]);
-        } else if (selector.includes('name=')) {
-          el.setAttribute("name", selector.match(/name="([^"]+)"/)[1]);
-        }
-        document.head.appendChild(el);
-      }
-      el.setAttribute(attr, value);
-    }
-
-    function setLinkRel(rel, hreflang, href) {
-      const selector = hreflang
-        ? `link[rel="${rel}"][hreflang="${hreflang}"]`
-        : `link[rel="${rel}"]`;
-      let el = document.querySelector(selector);
-      if (!el) {
-        el = document.createElement("link");
-        el.setAttribute("rel", rel);
-        if (hreflang) el.setAttribute("hreflang", hreflang);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("href", href);
-    }
-
-    function applySeoForLang(lang) {
-      const base = (window.SITE_URL || "https://tsahimur.mn").replace(/\/+$/, "");
-      const home = `${base}/`;
-      const seo = {
-        en: {
-          htmlLang: "en",
-          ogLocale: "en_US",
-          title: "Tsahim-Ur LLC — IT Consulting & System Development",
-          desc: "Practical IT consulting and reliable system development. We design, build, and modernize scalable digital systems with disciplined execution.",
-          url: `${home}?lang=en`
-        },
-        mn: {
-          htmlLang: "mn",
-          ogLocale: "mn_MN",
-          title: "Tsahim-Ur LLC — IT зөвлөх үйлчилгээ ба систем хөгжүүлэлт",
-          desc: "Практик IT зөвлөх үйлчилгээ, найдвартай систем хөгжүүлэлт. Бид тэлэх боломжтой дижитал системийг төлөвлөж, хөгжүүлж, шинэчилнэ.",
-          url: `${home}?lang=mn`
-        }
-      };
-
-      const cfg = seo[lang] || seo.en;
-      document.documentElement.lang = cfg.htmlLang;
-      document.title = cfg.title;
-      setOrCreateMeta('meta[name="description"]', "content", cfg.desc);
-      setOrCreateMeta('meta[property="og:title"]', "content", cfg.title);
-      setOrCreateMeta('meta[property="og:description"]', "content", cfg.desc);
-      setOrCreateMeta('meta[property="og:url"]', "content", cfg.url);
-      setOrCreateMeta('meta[property="og:locale"]', "content", cfg.ogLocale);
-      setOrCreateMeta('meta[name="twitter:title"]', "content", cfg.title);
-      setOrCreateMeta('meta[name="twitter:description"]', "content", cfg.desc);
-      setLinkRel("canonical", null, home);
-      setLinkRel("alternate", "en", `${home}?lang=en`);
-      setLinkRel("alternate", "mn", `${home}?lang=mn`);
-      setLinkRel("alternate", "x-default", `${home}?lang=en`);
-    }
-
-    function getLangFromUrl() {
-      const params = new URLSearchParams(window.location.search);
-      const lang = (params.get("lang") || "").toLowerCase();
-      return lang === "en" || lang === "mn" ? lang : null;
-    }
-
-    // Content dictionary for all editable website copy (EN/MN).
-    // If you want to update wording, do it here and keep keys unchanged.
-    const i18n = {
-      en: {
-        // Navigation + Hero
-        brand: "Tsahim-Ur LLC",
-        nav_services: "Services",
-        nav_about: "About",
-        nav_founders: "Founders",
-        nav_contact: "Contact",
-        theme: "Theme",
-        start_project: "Start a Conversation",
-        kicker: "IT Consulting • System Development",
-        h1: "Practical IT consulting. Reliable system development.",
-        sub: "We help organizations design, build, and modernize digital systems that scale with business growth. Clear architecture. Disciplined execution. Measurable results.",
-        cta_contact: "Start a Conversation",
-        cta_services: "What We Do",
-        chip_delivery: "Founder-led execution",
-        chip_modern: "Business-oriented engineering",
-        chip_security: "Scalable by design",
-        stat1_title: "Founder-Led Execution",
-        stat1_desc: "Every project is guided directly by experienced founders.",
-        stat2_title: "Business-Oriented Engineering",
-        stat2_desc: "We prioritize clarity, accountability, and measurable outcomes — not just code delivery.",
-        stat3_title: "Scalable by Design",
-        stat3_desc: "We build systems that grow with your organization.",
-        // Services
-        services_title: "What We Do",
-        services_note: "Executive-focused services aligned with growth, reliability, and long-term value.",
-        svc1_title: "IT Strategy & Architecture",
-        svc1_desc: "We assess current systems, define scalable architecture, and align technology decisions with business goals.",
-        svc2_title: "Custom System Development",
-        svc2_desc: "We design and build secure, maintainable web platforms, APIs, and enterprise applications.",
-        svc3_title: "System Modernization",
-        svc3_desc: "We refactor legacy systems, improve performance, and prepare infrastructure for long-term scalability.",
-        tag_arch: "Architecture",
-        tag_roadmap: "Roadmap",
-        tag_review: "Review",
-        tag_web: "Web",
-        tag_api: "API",
-        tag_integration: "Integration",
-        tag_modernization: "Modernization",
-        tag_performance: "Performance",
-        tag_scalability: "Scalability",
-        tag_leadership: "Leadership",
-        tag_governance: "Governance",
-        tag_delivery: "Delivery",
-        svc4_title: "Delivery & Technical Leadership",
-        svc4_desc: "We provide senior-level technical leadership, architecture oversight, and delivery governance.",
-        // About + Founders
-        about_title: "About Tsahim-Ur",
-        about_note: "Built for CEOs, CIOs, and operations leaders who need dependable execution.",
-        about_body: "Tsahim-Ur LLC is an IT consulting and system development company founded in 2014 by senior practitioners with broad cross-industry experience. We work with growing companies, financial institutions, and technology-driven organizations to build resilient digital systems.",
-        founders_title: "Founders",
-        founders_note: "Connect with the founders on LinkedIn.",
-        gn_desc: "Co-founder. IT consulting & system development leadership.",
-        tb_desc: "Co-founder. Experienced across multiple fields and systems.",
-        linkedin: "LinkedIn Profile",
-        // Contact + Footer
-        contact_title: "Contact",
-        contact_note: "Let’s discuss how technology can support your next phase of growth.",
-        contact_card_title: "Let’s discuss your growth roadmap",
-        contact_email_label: "Email",
-        email_us: "Start a Conversation",
-        back_top: "Back to Top",
-        rights: "All rights reserved.",
-        foot_note: "Founder-led consulting • Execution-focused delivery"
-      },
-      mn: {
-        // Navigation + Hero
-        brand: "Tsahim-Ur LLC",
-        nav_services: "Үйлчилгээ",
-        nav_about: "Бидний тухай",
-        nav_founders: "Үүсгэн байгуулагчид",
-        nav_contact: "Холбоо барих",
-        theme: "Загвар",
-        start_project: "Холбоо барих",
-        kicker: "IT зөвлөх үйлчилгээ • Систем хөгжүүлэлт",
-        h1: "Практик IT зөвлөх үйлчилгээ. Найдвартай систем хөгжүүлэлт.",
-        sub: "Бид байгууллагуудад бизнесийн өсөлтийг дагаж тэлэх дижитал системийг төлөвлөх, хөгжүүлэх, шинэчлэхэд дэмжлэг үзүүлдэг. Тодорхой архитектур. Сахилга баттай гүйцэтгэл. Хэмжигдэхүйц үр дүн.",
-        cta_contact: "Холбоо барих",
-        cta_services: "Үйлчилгээ",
-        chip_delivery: "Үүсгэн байгуулагчийн шууд оролцоо",
-        chip_modern: "Бизнес төвтэй инженерчлэл",
-        chip_security: "Тэлэх боломжтой архитектур",
-        stat1_title: "Үүсгэн байгуулагчийн шууд оролцоо",
-        stat1_desc: "Төсөл бүрийг туршлагатай үүсгэн байгуулагчид өөрсдөө удирдана.",
-        stat2_title: "Бизнес төвтэй инженерчлэл",
-        stat2_desc: "Зөвхөн код биш — тодорхой байдал, хариуцлага, хэмжигдэхүйц үр дүнд төвлөрнө.",
-        stat3_title: "Тэлэх боломжтой архитектур",
-        stat3_desc: "Байгууллагын өсөлтийг дагаж хөгжих системийг бүтээнэ.",
-        // Services
-        services_title: "Үйлчилгээ",
-        services_note: "Удирдлагын түвшинд ойлгомжтой, өсөлт ба найдвартай ажиллагаанд чиглэсэн үйлчилгээ.",
-        svc1_title: "IT зөвлөх үйлчилгээ & Архитектур",
-        svc1_desc: "Одоогийн системийг үнэлж, тэлэх боломжтой архитектур тодорхойлж, технологийн шийдвэрийг бизнесийн зорилготой уялдуулна.",
-        svc2_title: "Систем хөгжүүлэлт",
-        svc2_desc: "Аюулгүй, арчилж хөгжүүлэх боломжтой вэб платформ, API болон байгууллагын системийг төлөвлөж, хэрэгжүүлнэ.",
-        svc3_title: "Системийн шинэчлэл",
-        svc3_desc: "Хуучин системийг сайжруулж, гүйцэтгэлийг нэмэгдүүлж, урт хугацаанд тэлэхэд бэлтгэнэ.",
-        tag_arch: "Архитектур",
-        tag_roadmap: "Замын зураг",
-        tag_review: "Үнэлгээ",
-        tag_web: "Вэб",
-        tag_api: "API",
-        tag_integration: "Интеграци",
-        tag_modernization: "Шинэчлэл",
-        tag_performance: "Гүйцэтгэл",
-        tag_scalability: "Тэлэлт",
-        tag_leadership: "Манлайлал",
-        tag_governance: "Удирдлага",
-        tag_delivery: "Хүргэлт",
-        svc4_title: "Техникийн манлайлал",
-        svc4_desc: "Ахлах түвшний архитектур, техникийн хяналт, хүргэлтийн удирдлагаар дэмжинэ.",
-        // About + Founders
-        about_title: "Цахим-Ур ХХК-ийн тухай",
-        about_note: "CEO, CIO болон үйл ажиллагааны удирдлагад ойлгомжтой, найдвартай гүйцэтгэл.",
-        about_body: "Цахим-Ур ХХК нь туршлагатай ахлах мэргэжилтнүүд 2014 онд үүсгэн байгуулсан мэдээллийн технологийн зөвлөх үйлчилгээ, систем хөгжүүлэлтийн компани юм. Бид өсөж буй компаниуд, санхүүгийн байгууллагууд болон технологид суурилсан байгууллагуудтай хамтран урт хугацаанд тогтвортой, найдвартай дижитал системүүдийг бий болгоход хамтарч ажиллаж байна.",
-        founders_title: "Үүсгэн байгуулагчид",
-        founders_note: "LinkedIn дээр холбогдоорой.",
-        gn_desc: "Үүсгэн байгуулагч. IT зөвлөх үйлчилгээ ба систем хөгжүүлэлтийн манлайлал.",
-        tb_desc: "Үүсгэн байгуулагч. Олон чиглэл, олон төрлийн систем дээрх туршлагатай.",
-        linkedin: "LinkedIn",
-        // Contact + Footer
-        contact_title: "Холбоо барих",
-        contact_note: "Технологи танай байгууллагын дараагийн өсөлтийн үе шатанд хэрхэн дэмжлэг үзүүлэх талаар ярилцъя.",
-        contact_card_title: "Өсөлтийн дараагийн алхмаа ярилцъя",
-        contact_email_label: "Имэйл",
-        email_us: "Холбоо барих",
-        back_top: "Дээш буцах",
-        rights: "Бүх эрх хуулиар хамгаалагдсан.",
-        foot_note: "Үүсгэн байгуулагчийн удирдлага • Үр дүнд чиглэсэн гүйцэтгэл"
-      }
-    };
-
-    const langBtn = document.getElementById("langBtn");
-    const langLabel = document.getElementById("langLabel");
-
-    function applyLang(lang) {
-      // Update <html lang="">
-      document.documentElement.lang = lang === "mn" ? "mn" : "en";
-
-      // Update toggle label (shows the OTHER language you can switch to)
-      langLabel.textContent = (lang === "en") ? "MN" : "EN";
-
-      // Replace all [data-i18n] text
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        const val = i18n[lang]?.[key];
-        if (typeof val === "string") el.textContent = val;
-      });
-
-      localStorage.setItem("tsahimur_lang", lang);
-      applySeoForLang(lang);
-
-      const params = new URLSearchParams(window.location.search);
-      params.set("lang", lang);
-      history.replaceState(null, "", `${window.location.pathname}?${params.toString()}${window.location.hash}`);
-    }
-
-    const urlLang = getLangFromUrl();
-    const savedLang = localStorage.getItem("tsahimur_lang") || "en";
-    const initialLang = urlLang || savedLang;
-    applyLang(initialLang);
-
-    langBtn.addEventListener("click", () => {
-      const current = localStorage.getItem("tsahimur_lang") || "en";
-      applyLang(current === "en" ? "mn" : "en");
-    });
-
-    // Optional: mark active section in URL hash without jump
-    const sections = ["services","about","founders","contact"].map(id => document.getElementById(id));
-    const obs = new IntersectionObserver((entries) => {
-      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${visible.target.id}`);
-    }, { rootMargin: "-45% 0px -50% 0px", threshold: [0.12, 0.2, 0.35] });
-
-    sections.forEach(s => s && obs.observe(s));
-  </script>
+  </div>
+</footer>
+<script src="/assets/js/i18n.js?v=202611241729"></script>
+<script src="/assets/vendor/gsap.min.js"></script>
+<script src="/assets/vendor/ScrollTrigger.min.js"></script>
+<script src="/assets/vendor/lenis.min.js"></script>
+<script src="/assets/js/site.js?v=202611241729"></script>
 </body>
 </html>
