@@ -22,6 +22,9 @@
     if (typeof v !== 'string') v = I18N.en[key];
     return typeof v === 'string' ? v : null;
   }
+  // page links only: not #anchors, mailto:, tel: or other sites
+  var internalLinks = $$('a[href]').filter(function (a) { return !/^(#|\/\/|[a-z][a-z0-9+.-]*:)/i.test(a.getAttribute('href')); });
+  var fromDisk = location.protocol === 'file:'; // opened from a file explorer, no web server
   function setMeta(sel, attr, val) { var el = $(sel); if (el) el.setAttribute(attr, val); }
 
   // Wrap every word of a heading in a mask so it can rise into view.
@@ -60,10 +63,11 @@
     $$('[data-split]').forEach(splitWords);
     $$('[data-lang-label]').forEach(function (el) { el.textContent = lang === 'en' ? 'MN' : 'EN'; });
     // keep the chosen language on internal links
-    $$('a[href^="/"]').forEach(function (a) {
-      var url = new URL(a.getAttribute('href'), location.origin);
+    internalLinks.forEach(function (a) {
+      var url = new URL(a.href);
       url.searchParams.set('lang', lang);
-      a.setAttribute('href', url.pathname + url.search + url.hash);
+      if (fromDisk && /\/$/.test(url.pathname)) url.pathname += 'index.html';
+      a.setAttribute('href', fromDisk ? url.href : url.pathname + url.search + url.hash);
     });
     // SEO
     var title = t(lang, 'seo_' + PAGE + '_title'), desc = t(lang, 'seo_' + PAGE + '_desc');
@@ -72,7 +76,7 @@
     setMeta('meta[property="og:locale"]', 'content', lang === 'mn' ? 'mn_MN' : 'en_US');
     store('tsahimur_lang', lang);
     var params = new URLSearchParams(location.search); params.set('lang', lang);
-    history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash);
+    try { history.replaceState(null, '', location.pathname + '?' + params.toString() + location.hash); } catch (e) { /* some browsers block this on file:// */ }
     if (window.ScrollTrigger) window.ScrollTrigger.refresh();
     document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
@@ -109,6 +113,9 @@
     });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      // spaces alone do not count as filled in
+      $$('.inp', form).forEach(function (el) { el.value = el.value.trim(); });
+      if (!form.reportValidity()) return;
       var v = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
       var picked = function (g) { return $$('[data-pick-group="' + g + '"] .pick[aria-pressed="true"]', form).map(function (b) { return b.textContent.trim(); }); };
       var body = [
