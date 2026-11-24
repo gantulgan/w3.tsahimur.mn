@@ -1,3 +1,10 @@
+.git
+.wrangler
+.claude
+.dev.vars*
+.env*
+node_modules
+__pycache__
 src
 README.md
 wrangler.jsonc
