@@ -11,6 +11,8 @@ window.I18N = {
   "seo_about_desc": "An Ulaanbaatar technology consultancy founded in 2014 by senior engineers. Clarity, accountability and engineering discipline.",
   "seo_contact_title": "Contact — Tsahim-Ur LLC",
   "seo_contact_desc": "Tell us about your project. Email hello@tsahimur.mn — we reply in Mongolian or English.",
+  "seo_notfound_title": "Page not found — Tsahim-Ur LLC",
+  "seo_notfound_desc": "The page you are looking for does not exist or has moved.",
   "skip": "Skip to content",
   "nav_home": "Home",
   "nav_services": "Services",
@@ -241,7 +243,11 @@ window.I18N = {
   "ct_next": "What happens next",
   "ct_n1": "We read your note and reply with questions or a call time.",
   "ct_n2": "We talk through your systems, goals and constraints.",
-  "ct_n3": "You get a written proposal: scope, approach, timeline and cost."
+  "ct_n3": "You get a written proposal: scope, approach, timeline and cost.",
+  "nf_eyebrow": "Error 404",
+  "nf_title": "This page was <span class=\"ac\">not found.</span>",
+  "nf_sub": "It may have moved, or the address may be mistyped. Start again from the home page or tell us what you were looking for.",
+  "nf_home": "Back to home"
  },
  "mn": {
   "seo_home_title": "Tsahim-Ur LLC — МТ зөвлөх үйлчилгээ ба систем хөгжүүлэлт",
@@ -254,6 +260,8 @@ window.I18N = {
   "seo_about_desc": "2014 онд ахлах инженерүүдийн үүсгэн байгуулсан Улаанбаатарын технологийн зөвлөх компани.",
   "seo_contact_title": "Холбоо барих — Tsahim-Ur LLC",
   "seo_contact_desc": "Төслийнхөө талаар бидэнд бичээрэй. hello@tsahimur.mn — монгол болон англи хэлээр хариулна.",
+  "seo_notfound_title": "Хуудас олдсонгүй — Tsahim-Ur LLC",
+  "seo_notfound_desc": "Таны хайсан хуудас байхгүй эсвэл өөр хаяг руу шилжсэн байна.",
   "skip": "Агуулга руу шилжих",
   "nav_home": "Нүүр",
   "nav_services": "Үйлчилгээ",
@@ -484,6 +492,10 @@ window.I18N = {
   "ct_next": "Дараагийн алхам",
   "ct_n1": "Бид таны мессежийг уншаад, асуулт эсвэл уулзах цагийн санал илгээнэ.",
   "ct_n2": "Танай систем, зорилго, хязгаарлалтын талаар ярилцана.",
-  "ct_n3": "Хамрах хүрээ, арга барил, хугацаа, өртөг бүхий бичгэн санал авна."
+  "ct_n3": "Хамрах хүрээ, арга барил, хугацаа, өртөг бүхий бичгэн санал авна.",
+  "nf_eyebrow": "Алдаа 404",
+  "nf_title": "Хуудас <span class=\"ac\">олдсонгүй.</span>",
+  "nf_sub": "Хуудас шилжсэн эсвэл хаяг буруу бичигдсэн байж магадгүй. Нүүр хуудаснаас дахин эхлэх эсвэл юу хайж байснаа бидэнд хэлээрэй.",
+  "nf_home": "Нүүр хуудас руу буцах"
  }
 };

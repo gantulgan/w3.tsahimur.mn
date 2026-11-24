@@ -7,7 +7,7 @@ Usage:  python3 src/build.py
 - All copy lives in src/strings.py (English + Mongolian).
 - In templates, an empty element with t="key" gets data-i18n="key" and the English text;
   site.js swaps in Mongolian when the visitor switches language.
-- Output: index.html, services/, solutions/, about/, contact/ and assets/js/i18n.js
+- Output: index.html, services/, solutions/, about/, contact/, 404.html and assets/js/i18n.js
 """
 import json, os, re, sys, time
 
@@ -128,19 +128,33 @@ ORG_LD = '''  <script type="application/ld+json">
    "description":"IT consulting, solution architecture and system development company in Ulaanbaatar, Mongolia."}
   </script>'''
 
+SEO_LINKS = '''  <link rel="canonical" href="https://tsahimur.mn{{PATH}}">
+  <link rel="alternate" hreflang="en" href="https://tsahimur.mn{{PATH}}?lang=en">
+  <link rel="alternate" hreflang="mn" href="https://tsahimur.mn{{PATH}}?lang=mn">
+  <link rel="alternate" hreflang="x-default" href="https://tsahimur.mn{{PATH}}">'''
+
 PAGES = [  # (template, output, path, seo key)
     ('home', 'index.html', '/', 'home'),
     ('services', 'services/index.html', '/services/', 'services'),
     ('solutions', 'solutions/index.html', '/solutions/', 'solutions'),
     ('about', 'about/index.html', '/about/', 'about'),
     ('contact', 'contact/index.html', '/contact/', 'contact'),
+    ('404', '404.html', '/', 'notfound'),
 ]
 
+ROOT_ATTR = re.compile(r'\b(href|src)="/(?!/)([^"]*)"')
 T_ATTR = re.compile(r'\st="([a-z0-9_]+)"([^>]*)>')
+
+def relative(html, out):
+    """Root paths (/assets/x) become relative (../assets/x) so pages also open straight from disk."""
+    base = '../' * out.count('/')
+    return ROOT_ATTR.sub(lambda m: '%s="%s"' % (m.group(1), base + m.group(2) or './'), html)
 
 def fill(html, page, path, seo):
     vals = dict(BLOCKS)
     vals.update({'TITLE': EN['seo_%s_title' % seo], 'DESC': EN['seo_%s_desc' % seo], 'PATH': path, 'PAGE': seo})
+    indexed = seo != 'notfound'
+    vals.update({'ROBOTS': 'index,follow' if indexed else 'noindex', 'SEO_LINKS': SEO_LINKS if indexed else ''})
     if seo == 'home':
         vals['EXTRA_HEAD'] = ORG_LD
     for k in ['services', 'solutions', 'about', 'contact']:
@@ -159,6 +173,8 @@ def main():
     head, header, footer = read('partials', 'head.html'), read('partials', 'header.html'), read('partials', 'footer.html')
     for tpl, out, path, seo in PAGES:
         html = fill(head + header + read('pages', tpl + '.html') + footer, tpl, path, seo)
+        if out != '404.html':  # served at any depth, so its paths stay absolute
+            html = relative(html, out)
         dest = os.path.join(ROOT, out)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, 'w', encoding='utf-8') as f:
